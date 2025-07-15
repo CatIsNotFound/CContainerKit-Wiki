@@ -1,0 +1,973 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://catisnotfound.github.io/CContainerKit-Wiki/zh/apis/CArray/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>CArray APIs - CContainerKit WIKI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#carray-apis" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../" title="CContainerKit WIKI" class="md-header__button md-logo" aria-label="CContainerKit WIKI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CContainerKit WIKI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CArray APIs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/CContainerKit-Wiki/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="zh" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="CContainerKit WIKI" class="md-nav__button md-logo" aria-label="CContainerKit WIKI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CContainerKit WIKI
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Quick Start
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Intro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quickstart/install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Install
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quickstart/usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Usage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    API Refenrence
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            API Refenrence
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Intro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../update/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    By update time
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../categories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    By category
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../names/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    By Name
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../demos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Code Demos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contribute For Us
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      构造函数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="构造函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arrayinit" class="md-nav__link">
+    <span class="md-ellipsis">
+      arrayInit()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arrayinittype" class="md-nav__link">
+    <span class="md-ellipsis">
+      arrayInitType()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arraylist" class="md-nav__link">
+    <span class="md-ellipsis">
+      arrayList()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      析构函数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="析构函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#destroyarray" class="md-nav__link">
+    <span class="md-ellipsis">
+      destroyArray()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      元素相关函数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="元素相关函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arrayerase" class="md-nav__link">
+    <span class="md-ellipsis">
+      arrayErase()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arrayeraseall" class="md-nav__link">
+    <span class="md-ellipsis">
+      arrayEraseAll()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arrayiscontain" class="md-nav__link">
+    <span class="md-ellipsis">
+      arrayIsContain()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arrayindexof" class="md-nav__link">
+    <span class="md-ellipsis">
+      arrayIndexOf()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arrayat" class="md-nav__link">
+    <span class="md-ellipsis">
+      arrayAt()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arraymodify" class="md-nav__link">
+    <span class="md-ellipsis">
+      arrayModify()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="carray-apis">CArray APIs<a class="headerlink" href="#carray-apis" title="Permanent link">&para;</a></h1>
+<h2 id="_1">定义<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>由以下两个成员变量存储，总共占用 16 字节：</p>
+<ul>
+<li><code>elements</code>：指向 <a href="../CVariant/">CVariant</a> 数组的指针。</li>
+<li><code>length</code>：数组的长度。</li>
+</ul>
+<hr />
+<h2 id="_2">构造函数<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>以下构造函数必须经过<a href="#_13">析构函数</a>才能彻底销毁。否则会导致内存泄漏！</p>
+</div>
+<h3 id="arrayinit"><code>arrayInit()</code><a class="headerlink" href="#arrayinit" title="Permanent link">&para;</a></h3>
+<h4 id="_3">函数原型<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">CArray</span><span class="w"> </span><span class="nf">arrayInit</span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">length</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="_4">参数<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>length</code>：指定数组的长度。</li>
+</ul>
+<h4 id="_5">功能<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<ul>
+<li>初始化一个空的 CArray 数组。</li>
+<li>分配指定长度的 CVariant 数组，并将其元素初始化为默认值。</li>
+<li>返回初始化后的 CArray 数组。</li>
+</ul>
+<h3 id="arrayinittype"><code>arrayInitType()</code><a class="headerlink" href="#arrayinittype" title="Permanent link">&para;</a></h3>
+<h4 id="_6">函数原型<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">CArray</span><span class="w"> </span><span class="nf">arrayInitType</span><span class="p">(</span><span class="n">dataType</span><span class="w"> </span><span class="n">data_type</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">length</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="_7">参数<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>data_type</code>：指定数组元素的数据类型。</li>
+<li><code>length</code>：指定数组的长度。</li>
+</ul>
+<h4 id="_8">功能<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<ul>
+<li>初始化一个指定数据类型的 CArray 数组。</li>
+<li>分配指定长度的 CVariant 数组，并将其元素初始化为指定的数据类型的默认值。</li>
+</ul>
+<h3 id="arraylist"><code>arrayList()</code><a class="headerlink" href="#arraylist" title="Permanent link">&para;</a></h3>
+<h4 id="_9">函数原型<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">CArray</span><span class="w"> </span><span class="nf">arrayList</span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">length</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span>
+</code></pre></div>
+<h4 id="_10">参数<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>length</code>：指定数组的长度。</li>
+<li><code>...</code>：可变参数列表，用于初始化数组元素的值。</li>
+</ul>
+<h4 id="_11">功能<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<ul>
+<li>初始化一个 CArray 数组。</li>
+<li>分配指定长度的 CVariant 数组，并将其元素初始化为可变参数列表中的值。</li>
+<li>如果可变参数列表中的值数量不足，剩余的元素将被初始化为默认值。</li>
+</ul>
+<h4 id="_12">示例<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<p>初始化一个长度为 3 的 CArray 数组，并分别存放不同数据类型的变量。</p>
+<div class="highlight"><pre><span></span><code><span class="n">CArray</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arrayList</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">varInt</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">varChar</span><span class="p">(</span><span class="sc">&#39;A&#39;</span><span class="p">),</span><span class="w"> </span><span class="n">varString</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">));</span><span class="w"> </span>
+</code></pre></div>
+<hr />
+<h2 id="_13">析构函数<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<h3 id="destroyarray"><code>destroyArray()</code><a class="headerlink" href="#destroyarray" title="Permanent link">&para;</a></h3>
+<h4 id="_14">宏函数<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="cp">#define destroyArray(arr) _destroyArray(&amp;arr)</span>
+</code></pre></div>
+<h4 id="_15">函数原型<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">_destroyArray</span><span class="p">(</span><span class="n">CArray</span><span class="w"> </span><span class="o">*</span><span class="n">arr</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="_16">参数<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>arr</code>：指向要销毁的 CArray 数组的指针。</li>
+</ul>
+<h4 id="_17">功能<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<ul>
+<li>释放 CArray 数组的内存空间。</li>
+</ul>
+<hr />
+<h2 id="_18">元素相关函数<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
+<h3 id="arrayerase"><code>arrayErase()</code><a class="headerlink" href="#arrayerase" title="Permanent link">&para;</a></h3>
+<h4 id="_19">宏函数<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="cp">#define arrayErase(array, start_pos, end_pos)    _arrayErase(&amp;array, start_pos, end_pos)</span>
+</code></pre></div>
+<h4 id="_20">函数原型<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">_arrayErase</span><span class="p">(</span><span class="n">CArray</span><span class="w"> </span><span class="o">*</span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">start_pos</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">end_pos</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="_21">参数<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>array</code>：指向要操作的 CArray 数组的指针。</li>
+<li><code>start_pos</code>：起始位置。</li>
+<li><code>end_pos</code>：结束位置。</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>规定的区间范围（按照数学语言）：<code>[start_pos, end_pos]</code></p>
+</div>
+<h4 id="_22">功能<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
+<ul>
+<li>擦除 CArray 数组中指定范围内的元素并填充为<a href="">空值</a>。</li>
+</ul>
+<h3 id="arrayeraseall"><code>arrayEraseAll()</code><a class="headerlink" href="#arrayeraseall" title="Permanent link">&para;</a></h3>
+<h4 id="_23">宏函数<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="cp">#define arrayEraseAll(array)    _arrayEraseAll(&amp;array)</span>
+</code></pre></div>
+<h4 id="_24">函数原型<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">_arrayEraseAll</span><span class="p">(</span><span class="n">CArray</span><span class="w"> </span><span class="o">*</span><span class="n">array</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="_25">参数<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>array</code>：指向要操作的 CArray 数组的指针。</li>
+</ul>
+<h4 id="_26">功能<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
+<ul>
+<li>擦除 CArray 数组中的所有元素并将其填充为<a href="">空值</a>。</li>
+</ul>
+<h3 id="arrayiscontain"><code>arrayIsContain()</code><a class="headerlink" href="#arrayiscontain" title="Permanent link">&para;</a></h3>
+<h4 id="_27">宏函数<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="cp">#define arrayIsContain(array, key, pos)          _arrayIsElementContain(&amp;array, key, pos)</span>
+</code></pre></div>
+<h4 id="_28">函数原型<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="nf">_arrayIsElementContain</span><span class="p">(</span><span class="n">CArray</span><span class="w"> </span><span class="o">*</span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">CVariant</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">pos</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="_29">参数<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>array</code>：指向要操作的 CArray 数组的指针。</li>
+<li><code>key</code>：要查找的元素。</li>
+<li><code>pos</code>：起始位置。</li>
+</ul>
+<h4 id="_30">功能<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h4>
+<ul>
+<li>查找 CArray 数组中指定范围内是否包含指定的元素。</li>
+<li>返回 <code>true</code> 表示包含，<code>false</code> 表示不包含。</li>
+</ul>
+<h3 id="arrayindexof"><code>arrayIndexOf()</code><a class="headerlink" href="#arrayindexof" title="Permanent link">&para;</a></h3>
+<h4 id="_31">宏函数<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="cp">#define arrayIndexOf(array, element, pos)        _arrayIndexOf(&amp;array, element, pos)</span>
+</code></pre></div>
+<h4 id="_32">函数原型<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kt">size_t</span><span class="w"> </span><span class="nf">_arrayIndexOf</span><span class="p">(</span><span class="n">CArray</span><span class="w"> </span><span class="o">*</span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">CVariant</span><span class="w"> </span><span class="n">element</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">pos</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="_33">参数<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>array</code>：指向要操作的 CArray 数组的指针。</li>
+<li><code>element</code>：要查找的元素。</li>
+<li><code>pos</code>：起始位置。</li>
+</ul>
+<h4 id="_34">功能<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h4>
+<ul>
+<li>查找 CArray 数组中指定范围内第一次出现指定元素的索引。</li>
+<li>如果找到元素，则返回其索引；否则返回 <code>SIZE_MAX</code> 或 <code>N_POS</code>。</li>
+</ul>
+<h3 id="arrayat"><code>arrayAt()</code><a class="headerlink" href="#arrayat" title="Permanent link">&para;</a></h3>
+<h4 id="_35">宏函数<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="cp">#define arrayAt(array, index)                    _arrayAt(&amp;array, index)</span>
+</code></pre></div>
+<h4 id="_36">函数原型<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">CVariant</span><span class="w"> </span><span class="nf">_arrayAt</span><span class="p">(</span><span class="n">CArray</span><span class="w"> </span><span class="o">*</span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">index</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="_37">参数<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>array</code>：指向要操作的 CArray 数组的指针。</li>
+<li><code>index</code>：要访问的元素的索引。</li>
+</ul>
+<h4 id="_38">功能<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h4>
+<ul>
+<li>获取 CArray 数组中指定索引位置的元素。</li>
+<li>如果索引超出数组范围，则返回<a href="">空类型的元素</a>。</li>
+</ul>
+<h3 id="arraymodify"><code>arrayModify()</code><a class="headerlink" href="#arraymodify" title="Permanent link">&para;</a></h3>
+<h4 id="_39">宏函数<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="cp">#define arrayModify(array, index, value)         _arrayModify(&amp;array, index, value)</span>
+</code></pre></div>
+<h4 id="_40">函数原型<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">_arrayModify</span><span class="p">(</span><span class="n">CArray</span><span class="w"> </span><span class="o">*</span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="n">CVariant</span><span class="w"> </span><span class="n">value</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="_41">参数<a class="headerlink" href="#_41" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>array</code>：指向要操作的 CArray 数组的指针。</li>
+<li><code>index</code>：要修改的元素的索引。</li>
+<li><code>value</code>：要设置的新值。</li>
+</ul>
+<h4 id="_42">功能<a class="headerlink" href="#_42" title="Permanent link">&para;</a></h4>
+<ul>
+<li>修改 CArray 数组中指定索引位置的元素的值。</li>
+<li>如果索引超出数组范围，则不进行任何操作。</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/CatIsNotFound/CContainerKit" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
