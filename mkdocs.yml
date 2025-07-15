@@ -1,8 +1,57 @@
 site_name: CContainerKit WIKI
+site_url: https://catisnotfound.github.io/CContainerKit-Wiki
+
+theme: 
+  name: material
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+      toc_depth: 3
+      baselevel: 1
+
 nav:
-  - 首页: index.md
-  - 快速开始: quickstart.md
-  - APIs: apis.md
+  - Home: index.md
+  - Quick Start: 
+    - Intro: quickstart/index.md
+    - Install: quickstart/install.md
+    - Usage: quickstart/usage.md
+  - API Refenrence: 
+    - Intro: apis/index.md
+    - By update time: apis/update.md
+    - By category: apis/categories.md
+    - By Name: apis/names.md
+  - Code Demos: demos/index.md
+  - Contribute For Us: contribute/index.md
 
+plugins:
+  - search
+  - i18n:
+      languages:
+        - locale: en
+          name: English
+          build: true
+          default: true
+        - locale: zh
+          name: 简体中文
+          build: true
+          
+      docs_structure: folder
 
-theme: readthedocs
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/CatIsNotFound/CContainerKit
