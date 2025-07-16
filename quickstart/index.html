@@ -14,7 +14,7 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="install/">
+        <link rel="next" href="../apis/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Intro - CContainerKit WIKI</title>
+        <title>Quick Start - CContainerKit WIKI</title>
       
     
     
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Intro
+              Quick Start
             
           </span>
         </div>
@@ -245,46 +245,6 @@
   
   
   
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Quick Start
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            Quick Start
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
@@ -293,71 +253,100 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Intro
+    Quick Start
     
   </span>
   
 
       </a>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="install/" class="md-nav__link">
         
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  <span class="md-ellipsis">
-    Install
+  
     
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#compile-and-install-the-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compile and Install the Project
+    </span>
+  </a>
   
-  
-    <li class="md-nav__item">
-      <a href="usage/" class="md-nav__link">
+    <nav class="md-nav" aria-label="Compile and Install the Project">
+      <ul class="md-nav__list">
         
+          <li class="md-nav__item">
+  <a href="#step-1-clone-the-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Clone the Project
+    </span>
+  </a>
   
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-compile-and-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Compile and Install
+    </span>
+  </a>
   
-  <span class="md-ellipsis">
-    Usage
-    
-  </span>
+</li>
+        
+      </ul>
+    </nav>
   
-
-      </a>
-    </li>
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-import-the-library-in-a-new-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Import the Library in a New Project
+    </span>
+  </a>
   
-
-              
-            
-          </ul>
-        </nav>
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -431,12 +420,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../apis/update/" class="md-nav__link">
+      <a href="../apis/CArray/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    By update time
+    CArray
     
   </span>
   
@@ -454,12 +443,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../apis/categories/" class="md-nav__link">
+      <a href="../apis/CVector/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    By category
+    CVector
     
   </span>
   
@@ -477,12 +466,58 @@
   
   
     <li class="md-nav__item">
-      <a href="../apis/names/" class="md-nav__link">
+      <a href="../apis/CString/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    By Name
+    CString
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apis/CVariant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CVariant
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apis/CDebug/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CDebug
     
   </span>
   
@@ -534,7 +569,7 @@
   
   
   <span class="md-ellipsis">
-    Contribute For Us
+    Get involved
     
   </span>
   
@@ -564,6 +599,65 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#compile-and-install-the-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compile and Install the Project
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compile and Install the Project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-clone-the-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Clone the Project
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-compile-and-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Compile and Install
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-import-the-library-in-a-new-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Import the Library in a New Project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -580,6 +674,123 @@
 
 <h1 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h1>
 <hr />
+<p>This quick start guide will help you quickly understand the library's installation method, core functions, and basic usage, allowing you to quickly integrate and efficiently use CContainerKit in your projects.</p>
+<h2 id="compile-and-install-the-project">Compile and Install the Project<a class="headerlink" href="#compile-and-install-the-project" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-clone-the-project">Step 1: Clone the Project<a class="headerlink" href="#step-1-clone-the-project" title="Permanent link">&para;</a></h3>
+<p>If you have <a href="https://git-scm.com/downloads">Git</a> installed, please use the following command to clone the project:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/CatIsNotFound/CContainerKit.git
+</code></pre></div>
+<p>After cloning is complete, use the <code>ls</code> command and you should be able to find a directory named <code>CContainerKit</code>.</p>
+<h3 id="step-2-compile-and-install">Step 2: Compile and Install<a class="headerlink" href="#step-2-compile-and-install" title="Permanent link">&para;</a></h3>
+<p>In this step, you need to use <a href="https://cmake.org/download/">CMake</a> for different operations depending on your operating system and compiler.</p>
+<h4 id="ninja-linux">Ninja (Linux)<a class="headerlink" href="#ninja-linux" title="Permanent link">&para;</a></h4>
+<p>It is highly recommended to use <a href="https://ninja-build.org/">Ninja</a> for compilation in a Linux environment. <em>(Note: Ninja needs to be installed via package manager or downloaded from <a href="https://github.com/ninja-build/ninja/releases">Github</a>)</em></p>
+<p>Enter the <code>CContainerKit</code> directory and execute the following commands to compile the project:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>CContainerKit
+mkdir<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
+cmake<span class="w"> </span>..<span class="w"> </span>-G<span class="w"> </span><span class="s2">&quot;Ninja&quot;</span><span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Release<span class="w"> </span>-DCMAKE_INSTALL_PREFIX<span class="o">=</span>&lt;INSTALL_DIR&gt;<span class="w"> </span>
+ninja<span class="w"> </span>install
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please replace <code>&lt;INSTALL_DIR&gt;</code> with your desired installation directory path. When you execute the cmake configuration command, you can see the output installation path in the terminal. You will usually find a line like this:</p>
+<div class="highlight"><pre><span></span><code>-- CMAKE_INSTALL_PREFIX: &lt;INSTALL_DIR&gt;
+</code></pre></div>
+</div>
+<h4 id="gcc-linux">GCC (Linux)<a class="headerlink" href="#gcc-linux" title="Permanent link">&para;</a></h4>
+<p>Enter the <code>CContainerKit</code> directory and execute the following commands to compile the project:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>CContainerKit
+mkdir<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
+cmake<span class="w"> </span>..<span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Release<span class="w"> </span>-DCMAKE_INSTALL_PREFIX<span class="o">=</span>&lt;INSTALL_DIR&gt;
+make<span class="w"> </span>install
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please replace <code>&lt;INSTALL_DIR&gt;</code> with your desired installation directory path. When you execute the cmake configuration command, you can see the output installation path in the terminal. You will usually find a line like this:</p>
+<div class="highlight"><pre><span></span><code>-- CMAKE_INSTALL_PREFIX: &lt;INSTALL_DIR&gt;
+</code></pre></div>
+</div>
+<h4 id="mingw-windows">MinGW (Windows)<a class="headerlink" href="#mingw-windows" title="Permanent link">&para;</a></h4>
+<p>Enter the <code>CContainerKit</code> directory and execute the following commands to compile the project:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>CContainerKit
+mkdir<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
+cmake..<span class="w"> </span>-G<span class="w"> </span><span class="s2">&quot;MinGW Makefiles&quot;</span><span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Release<span class="w"> </span>-DCMAKE_INSTALL_PREFIX<span class="o">=</span>&lt;INSTALL_DIR&gt;
+mingw32-make<span class="w"> </span>install
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please replace <code>&lt;INSTALL_DIR&gt;</code> with your desired installation directory path. When you execute the cmake configuration command, you can see the output installation path in the terminal. You will usually find a line like this:</p>
+<div class="highlight"><pre><span></span><code>-- CMAKE_INSTALL_PREFIX: &lt;INSTALL_DIR&gt;
+</code></pre></div>
+</div>
+<h4 id="msvc-windows">MSVC (Windows)<a class="headerlink" href="#msvc-windows" title="Permanent link">&para;</a></h4>
+<p>This tutorial recommends using the <a href="https://learn.microsoft.com/en-us/cpp/build/reference/nmake-reference?view=msvc-170">NMake</a> build tool (generally, the latest version of MSVC has this build tool built-in).</p>
+<p>Open the <code>x64 Native Tools Command Prompt for VS 2022</code> terminal on Windows.</p>
+<p>Enter the <code>CContainerKit</code> directory and execute the following commands to compile the project:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/path/to/CContainerKit
+mkdir<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
+cmake..<span class="w"> </span>-G<span class="w"> </span><span class="s2">&quot;NMake Makefiles&quot;</span><span class="w"> </span>-A<span class="w"> </span>x64<span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Release<span class="w"> </span>-DCMAKE_INSTALL_PREFIX<span class="o">=</span>&lt;INSTALL_DIR&gt;
+nmake<span class="w"> </span>install
+</code></pre></div>
+<p>If using the <a href="https://learn.microsoft.com/en-us/cpp/build/reference/msbuild-reference-cpp?view=msvc-170">MSBuild</a> build tool, execute the following commands to compile the project:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/path/to/CContainerKit
+mkdir<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
+cmake..<span class="w"> </span>-G<span class="w"> </span><span class="s2">&quot;Visual Studio 17 2022&quot;</span><span class="w"> </span>-A<span class="w"> </span>x64<span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Release<span class="w"> </span>-DCMAKE_INSTALL_PREFIX<span class="o">=</span>&lt;INSTALL_DIR&gt;
+cmake<span class="w"> </span>--build<span class="w"> </span>.<span class="w"> </span>--config<span class="o">=</span>Release<span class="w"> </span>--target<span class="o">=</span>install
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please replace <code>&lt;INSTALL_DIR&gt;</code> with your desired installation directory path. When you execute the cmake configuration command, you can see the output installation path in the terminal. You will usually find a line like this:</p>
+<div class="highlight"><pre><span></span><code>-- CMAKE_INSTALL_PREFIX: &lt;INSTALL_DIR&gt;
+</code></pre></div>
+</div>
+<h2 id="how-to-import-the-library-in-a-new-project">How to Import the Library in a New Project<a class="headerlink" href="#how-to-import-the-library-in-a-new-project" title="Permanent link">&para;</a></h2>
+<p>This tutorial highly recommends using CMake to manage your project. The specific import steps are as follows:</p>
+<ol>
+<li>In your newly created project, create a <code>CMakeLists.txt</code> file.</li>
+<li>
+<p>Add the following content to the <code>CMakeLists.txt</code> file:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.10</span><span class="p">)</span>
+<span class="nb">project</span><span class="p">(</span><span class="s">MyProject</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_STANDARD</span><span class="w"> </span><span class="s">11</span><span class="p">)</span>
+
+<span class="c"># You have to set the CMAKE_PREFIX_PATH to the install directory of CContainerKit.</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_PREFIX_PATH</span><span class="w"> </span><span class="s">/path/to/CContainerKit/</span><span class="p">)</span>
+<span class="nb">find_package</span><span class="p">(</span><span class="s">CContainerKit</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span>
+
+<span class="nb">add_executable</span><span class="p">(</span><span class="s">MyProject</span><span class="w"> </span><span class="s">main.c</span><span class="p">)</span>
+
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">MyProject</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s">CContainerKit::CContainerKit</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please replace <code>/path/to/CContainerKit/</code> with the installation path you specified when compiling the project.</p>
+<p>Please replace <code>MyProject</code> with your actual project name.</p>
+</div>
+</li>
+<li>
+<p>Add the following content to the <code>main.c</code> file:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;CContainerKit.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;Hello world!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</li>
+<li>
+<p>Compile and run the project.</p>
+<p>You will see the output as follows:</p>
+<div class="highlight"><pre><span></span><code>[Debug] Hello world!
+</code></pre></div>
+</li>
+</ol>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>Congratulations! You have successfully installed and used the CContainerKit library.</p>
+<div class="admonition tip">
+<p class="admonition-title">See also</p>
+<p>For more information about CContainerKit, please refer to the <a href="../apis/">API Documentation</a> and <a href="../demos/">Code Demos</a>.</p>
+</div>
 
 
 
