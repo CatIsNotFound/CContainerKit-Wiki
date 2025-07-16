@@ -2,7 +2,19 @@
 
 ## 定义
 
+CArray 是一个静态数组，用于存储多个 [CVariant](CVariant.md) 类型的元素。使用此类型，可以在有限的存储空间中方便管理并操作多个变量。
+
+!!! note
+    区别于 [CVector](CVector.md)，CArray 的**数组长度（大小）是固定的**，无法动态调整。
+
 由以下两个成员变量存储，总共占用 16 字节：
+
+```c
+typedef struct {
+    CVariant* elements;
+    size_t length;
+} CArray;
+```
 
 - `elements`：指向 [CVariant](CVariant.md) 数组的指针。
 - `length`：数组的长度。
@@ -29,8 +41,18 @@ CArray arrayInit(size_t length);
 #### 功能
 
 - 初始化一个空的 CArray 数组。
-- 分配指定长度的 CVariant 数组，并将其元素初始化为默认值。
+- 分配指定长度的 [CVariant](CVariant.md) 数组，并将其元素初始化为默认值。
 - 返回初始化后的 CArray 数组。
+
+#### 示例
+
+初始化一个长度为 3 的 CArray 数组。
+
+```c
+CArray arr = arrayInit(3);
+```
+
+通过遍历该数组获得每个元素，将会得到 3 个[空类型]()的 [CVariant](CVariant.md) 变量。
 
 ### `arrayInitType()`
 
@@ -48,7 +70,18 @@ CArray arrayInitType(dataType data_type, size_t length);
 #### 功能
 
 - 初始化一个指定数据类型的 CArray 数组。
-- 分配指定长度的 CVariant 数组，并将其元素初始化为指定的数据类型的默认值。
+- 分配指定长度的 [CVariant](CVariant.md) 数组，并将其元素初始化为指定的数据类型的默认值。
+- 返回初始化后的 CArray 数组。
+
+#### 示例
+
+初始化一个长度为 3 的 CArray 数组，每个元素的数据类型为 `int`。
+
+```c
+CArray arr = arrayInitType(TYPE_INT, 3);
+```
+
+通过遍历该数组获得每个元素，将会得到 3 个[整数类型]()的 [CVariant](CVariant.md) 变量且值为 0。
 
 ### `arrayList()`
 
@@ -66,7 +99,7 @@ CArray arrayList(size_t length, ...);
 #### 功能
 
 - 初始化一个 CArray 数组。
-- 分配指定长度的 CVariant 数组，并将其元素初始化为可变参数列表中的值。
+- 分配指定长度的 [CVariant](CVariant.md) 数组，并将其元素初始化为可变参数列表中的值。
 - 如果可变参数列表中的值数量不足，剩余的元素将被初始化为默认值。
 
 #### 示例
@@ -76,6 +109,8 @@ CArray arrayList(size_t length, ...);
 ```c
 CArray arr = arrayList(3, varInt(1), varChar('A'), varString("Hello World!")); 
 ```
+
+通过遍历该数组获得每个元素，将会得到 3 个不同类型的 [CVariant](CVariant.md) 变量。
 
 -----
 
@@ -128,7 +163,9 @@ void _arrayErase(CArray *array, size_t start_pos, size_t end_pos);
 - `end_pos`：结束位置。
 
 !!! note
-    规定的区间范围（按照数学语言）：`[start_pos, end_pos]`
+    首先，规定的区间范围（按照数学语言）：`[start_pos, end_pos]`，即包含 `start_pos` 和 `end_pos` 位置的元素。
+
+    其次，还需要满足以下条件：`start_pos <= end_pos`。
 
 #### 功能
 
@@ -251,6 +288,7 @@ void _arrayModify(CArray *array, size_t index, CVariant value);
 - `value`：要设置的新值。
 
 #### 功能
+
 - 修改 CArray 数组中指定索引位置的元素的值。
 - 如果索引超出数组范围，则不进行任何操作。
 

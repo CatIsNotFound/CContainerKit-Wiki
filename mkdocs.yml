@@ -25,17 +25,16 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Quick Start: 
-    - Intro: quickstart/index.md
-    - Install: quickstart/install.md
-    - Usage: quickstart/usage.md
+  - Quick Start: quickstart/index.md 
   - API Refenrence: 
     - Intro: apis/index.md
-    - By update time: apis/update.md
-    - By category: apis/categories.md
-    - By Name: apis/names.md
+    - CArray: apis/CArray.md
+    - CVector: apis/CVector.md
+    - CString: apis/CString.md
+    - CVariant: apis/CVariant.md
+    - CDebug: apis/CDebug.md
   - Code Demos: demos/index.md
-  - Contribute For Us: contribute/index.md
+  - Get involved: contribute/index.md
 
 plugins:
   - search

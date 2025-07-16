@@ -2,8 +2,11 @@
 
 -----
 
-Please select the sorting method to view the API list:
+Please select a category below to see a list of APIs:
 
-- [Sort by Update time](update.md)
-- [Sort by Category](categories.md)
-- [Sort by Name](names.md)
+- [CArray APIs](CArray.md)
+- [CVector APIs](CVector.md)
+- [CString APIs](CString.md)
+- [CVariant APIs](CVariant.md)
+- [CDebug APIs](CDebug.md)
+
