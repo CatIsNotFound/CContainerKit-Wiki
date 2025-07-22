@@ -146,12 +146,12 @@ const char *_varTypeName(CVariant *variant);
 
 CVariant 类对应不同的[数据类型定义](#_3)，提供了多种其对应的定义变量函数，具体如下：
 
-### `_varEmpty()`
+### `varEmpty()`
 
 #### 函数原型
 
 ```c
-CVariant _varEmpty(void);
+CVariant varEmpty(void);
 ```
 
 #### 返回值
@@ -1186,7 +1186,7 @@ void printVarData(CVariant *variant);
 #### 示例
 
 ```c
-CVariant var = varInt32(10);
+CVariant var = varInt(10);
 printVarData(var);
 ```
 

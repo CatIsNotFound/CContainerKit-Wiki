@@ -24,10 +24,11 @@ git clone https://github.com/CatIsNotFound/CContainerKit.git
 
 在 MacOS/Linux 下，使用 [Clang](https://clang.llvm.org/) 编译项目。
 
-!!! tips "如何安装 Clang?"
+??? tip "如何安装 Clang?"
     **MacOS:**
 
     **方法一：安装 Xcode 命令行工具【推荐】**
+    
     通过执行下列命令，这将会弹出图形化窗口，根据其提示选择并安装即可。
 
     ```bash
@@ -73,7 +74,7 @@ make install
 
 这里非常推荐 Linux 环境下使用 [Ninja](https://ninja-build.org/) 进行编译。
 
-!!! tips "如何安装 Ninja"
+??? tip "如何安装 Ninja"
     在不同的 Linux 发行版上，您可能需要使用不同的包管理器来安装 Ninja。
 
     ```bash
@@ -100,7 +101,7 @@ ninja install
 
 #### GCC (Linux)
 
-!!! tips "如何安装 GCC？"
+??? tip "如何安装 GCC？"
     在 Linux 系统中，你可以使用包管理器安装。
 
     ```bash

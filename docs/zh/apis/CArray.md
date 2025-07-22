@@ -2,7 +2,7 @@
 
 ## 定义
 
-CArray 是一个静态数组，用于存储多个 [CVariant](CVariant.md) 类型的元素。使用此类型，可以在有限的存储空间中方便管理并操作多个变量。
+CArray 是一个静态数组，用于存储多个 [CVariant](CVariant.md) 类型的元素。使用此容器，可以在有限的存储空间中方便管理并操作多个变量。
 
 !!! note
     区别于 [CVector](CVector.md)，CArray 的**数组长度（大小）是固定的**，无法动态调整。
@@ -136,7 +136,31 @@ void _destroyArray(CArray *arr);
 
 #### 功能
 
-- 释放 CArray 数组的内存空间。
+- 仅释放 CArray 数组的内存空间，**而不会释放数组中的元素。**
+
+
+### `deleteArray()`
+
+#### 宏函数
+
+```c
+#define deleteArray(arr) _deleteArray(&arr)
+```
+
+#### 函数原型
+
+```c
+void _deleteArray(CArray *arr);
+```
+
+#### 参数
+
+- `arr`：指向要销毁的 CArray 数组的指针。
+
+#### 功能
+
+- 释放 CArray 数组的内存空间，**并会释放数组中的元素。**
+
 
 -----
 
@@ -169,7 +193,9 @@ void _arrayErase(CArray *array, size_t start_pos, size_t end_pos);
 
 #### 功能
 
-- 擦除 CArray 数组中指定范围内的元素并填充为[空值]()。
+- 释放 CArray 数组中指定范围内的元素并填充为空值。
+
+
 
 ### `arrayEraseAll()`
 
@@ -191,7 +217,7 @@ void _arrayEraseAll(CArray *array);
 
 #### 功能
 
-- 擦除 CArray 数组中的所有元素并将其填充为[空值]()。
+- 释放 CArray 数组中的所有元素并将其填充为[空值]()。
 
 ### `arrayIsContain()`
 

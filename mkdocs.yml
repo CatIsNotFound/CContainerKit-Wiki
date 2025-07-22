@@ -58,6 +58,9 @@ plugins:
   - search
 
   - i18n:
+      reconfigure_material: true
+      reconfigure_search: true
+      fallback_to_default: true
       languages:
         - locale: en
           name: English
@@ -69,8 +72,15 @@ plugins:
           
       docs_structure: folder
   - git-revision-date-localized:
-      type: datetime
+      type: timeago
+      timezone: Asia/Shanghai
       fallback_to_build_date: true
+      enable_creation_date: true
+      exclude:
+        - en/index.md
+        - zh/index.md
+      enable_git_follow: true
+      enabled: true
 
 
 extra:

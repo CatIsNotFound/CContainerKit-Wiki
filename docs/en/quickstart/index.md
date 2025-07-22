@@ -25,7 +25,7 @@ In this step, you need to use [CMake](https://cmake.org/download/) for different
 
 On MacOS/Linux, compile the project using [Clang](https://clang.llvm.org/).
 
-!!! tip "How to install Clang?"
+??? tip "How to install Clang?"
     **MacOS:**
 
     **Option 1: Install Xcode Command Line Tools [Recommended]**
@@ -75,7 +75,7 @@ make install
 
 It is highly recommended to use [Ninja](https://ninja-build.org/) for compilation in a Linux environment. *(Note: Ninja needs to be installed via package manager or downloaded from [Github](https://github.com/ninja-build/ninja/releases))*
 
-!!! tips "How to install ninja"
+??? tip "How to install ninja"
     On different Linux distributions, you may need to use different package managers to install Ninja.
 
     ```bash
@@ -104,7 +104,7 @@ ninja install
 
 On Linux systems, compile the project using [GCC](https://gcc.gnu.org/).
 
-!!! tip "How to install GCC?"
+??? tip "How to install GCC?"
     On Linux systems, you can install GCC using the package manager.
 
     ```bash
