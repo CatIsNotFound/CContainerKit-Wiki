@@ -20,9 +20,67 @@ git clone https://github.com/CatIsNotFound/CContainerKit.git
 
 此步骤下，需要根据不同的操作系统和编译器并使用 [CMake](https://cmake.org/download/) 进行不同的操作。
 
+#### Clang (MacOS/Linux)
+
+在 MacOS/Linux 下，使用 [Clang](https://clang.llvm.org/) 编译项目。
+
+!!! tips "如何安装 Clang?"
+    **MacOS:**
+
+    **方法一：安装 Xcode 命令行工具【推荐】**
+    通过执行下列命令，这将会弹出图形化窗口，根据其提示选择并安装即可。
+
+    ```bash
+    xcode-select --install
+    ```
+
+    **方法二：使用包管理器安装**
+    
+    你可以通过 [Homebrew](https://brew.sh/) 安装 Clang。
+
+    ```bash
+    brew install clang
+    ```
+
+    **Linux:**
+
+    您可以通过包管理器（通常使用 `apt` 或 `dnf`）安装 Clang。
+
+    ```bash
+    sudo apt install clang clang++ lldb lld clang-format clang-tidy // Debian/Ubuntu
+    sudo dnf install clang clang-devel lldb lld                     // Fedora/CentOS/RHEL
+    sudo pacman -S clang clang-tools-extra                          // Arch Linux/Manjaro
+    ```
+
+进入 `CContainerKit` 目录，执行以下命令编译项目：
+
+```bash
+cd CContainerKit
+mkdir build && cd build
+cmake .. -G "UNIX Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=<INSTALL_DIR> 
+make install
+```
+
+!!! note
+    请将 `<INSTALL_DIR>` 替换为您希望安装的目录路径。当执行 cmake 配置命令时，在终端中你可以看到输出的安装路径。通常会找到如下行内容：
+
+    ```
+    -- CMAKE_INSTALL_PREFIX: <INSTALL_DIR>
+    ```
+
+
 #### Ninja (Linux)
 
-这里非常推荐 Linux 环境下使用 [Ninja](https://ninja-build.org/) 进行编译。*(注：Ninja 需要通过包管理器或通过 [Github](https://github.com/ninja-build/ninja/releases) 下载安装)*
+这里非常推荐 Linux 环境下使用 [Ninja](https://ninja-build.org/) 进行编译。
+
+!!! tips "如何安装 Ninja"
+    在不同的 Linux 发行版上，您可能需要使用不同的包管理器来安装 Ninja。
+
+    ```bash
+    sudo apt install ninja-build -y     // Debian/Ubuntu
+    sudo dnf install ninja-build -y     // Fedora/CentOS/RHEL
+    sudo pacman -S ninja                // Arch Linux/Manjaro
+    ```
 
 进入 `CContainerKit` 目录，执行以下命令编译项目：
 
@@ -41,6 +99,15 @@ ninja install
     ```
 
 #### GCC (Linux)
+
+!!! tips "如何安装 GCC？"
+    在 Linux 系统中，你可以使用包管理器安装。
+
+    ```bash
+    sudo apt install gcc g++ make gdb -y      // Debian/Ubuntu
+    sudo dnf install gcc gcc-c++ make gdb -y  // Fedora/CentOS/RHEL
+    sudo pacman -S gcc g++ make gdb           // Arch Linux/Manjaro
+    ```
 
 进入 `CContainerKit` 目录，执行以下命令编译项目：
 
@@ -159,3 +226,5 @@ cmake --build . --config=Release --target=install
 
 !!! tip "另请参阅"
     关于 CContainerKit 的更多信息，请参考 [API 文档](../apis/index.md)以及[示例代码](../demos/index.md)。
+
+--8<-- "includes/zh/abbreviations.md"

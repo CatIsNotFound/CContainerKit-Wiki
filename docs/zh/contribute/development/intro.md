@@ -53,25 +53,26 @@ CContainerKit/
 
 #### Visual Studio
 
-1. 打开 Visual Studio，选择 `File` -> `Open` -> `Project/Solution`。
+1. 打开 Visual Studio，选择 `File` → `Open` → `Project/Solution`。
 2. 选择项目目录下的 `CMakeLists.txt` 文件。
 3. 选择 `CMake` 作为生成器，点击 `Open`。
 4. 等待 Visual Studio 加载项目。
-5. 选择 `Build` -> `Build All` 或使用快捷键 `Ctrl + Shift + B` 来编译项目。
+5. 选择 `Build` → `Build All` 或使用快捷键 ++ctrl+shift+b++ 来编译项目。
+
 
 #### CLion
 
-1. 打开 CLion，选择 `File` -> `Open`。
+1. 打开 CLion，选择 `File` → `Open`。
 2. 选择项目目录。
 3. 等待 CLion 加载项目。
-4. 选择 `Build` -> `Build Project` 或使用快捷键 `Ctrl + F9` 来编译项目。
+4. 选择 `Build` → `Build Project` 或使用快捷键 ++ctrl+f9++ 来编译项目。
 
 #### Code::Blocks
 
-1. 打开 Code::Blocks，选择 `File` -> `Open`。
+1. 打开 Code::Blocks，选择 `File` → `Open`。
 2. 选择项目目录。
 3. 等待 Code::Blocks 加载项目。
-4. 选择 `Build` -> `Build and Run` 或使用快捷键 `F9` 来编译项目。
+4. 选择 `Build` → `Build and Run` 或使用快捷键 ++f9++ 来编译项目。
 
 ### 手动编译
 
@@ -117,7 +118,7 @@ CContainerKit/
 #### MinGW
 
 !!! note
-    Windows 环境下，需要手动安装 MinGW。关于其 MinGW 的下载，请自行在网上搜索。
+    Windows 环境下，需要手动安装 [MinGW](https://www.mingw-w64.org/downloads/)。若安装如 Jetbrain CLion、Qt Creator 等 IDE，通常会自带或安装 MinGW。（这取决于安装程序下是否已经包含 MinGW）
     
     安装完成后，需要**手动配置环境变量**才能使用。
     检查终端是否已安装 MinGW：
