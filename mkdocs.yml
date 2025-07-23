@@ -46,11 +46,16 @@ nav:
   - Quick Start: quickstart/index.md 
   - API Refenrence: 
     - Intro: apis/index.md
-    - CArray: apis/CArray.md
-    - CVector: apis/CVector.md
-    - CString: apis/CString.md
-    - CVariant: apis/CVariant.md
-    - CDebug: apis/CDebug.md
+    - Containers:
+      - CArray: apis/CArray.md
+      - CVector: apis/CVector.md
+      - CString: apis/CString.md
+      - CStack: apis/CStack.md
+      - CQueue: apis/CQueue.md
+      - CLinkedList: apis/CLinkedList.md
+    - Common/Misc:
+      - CVariant: apis/CVariant.md
+      - CDebug: apis/CDebug.md
   - Code Demos: demos/index.md
   - Get involved: contribute/index.md
 
@@ -79,7 +84,7 @@ plugins:
       exclude:
         - en/index.md
         - zh/index.md
-      enable_git_follow: true
+      enable_git_follow: false
       enabled: true
 
 

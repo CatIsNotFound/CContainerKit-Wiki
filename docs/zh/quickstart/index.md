@@ -48,7 +48,7 @@ git clone https://github.com/CatIsNotFound/CContainerKit.git
     您可以通过包管理器（通常使用 `apt` 或 `dnf`）安装 Clang。
 
     ```bash
-    sudo apt install clang clang++ lldb lld clang-format clang-tidy // Debian/Ubuntu
+    sudo apt install clang lldb lld make                            // Debian/Ubuntu
     sudo dnf install clang clang-devel lldb lld                     // Fedora/CentOS/RHEL
     sudo pacman -S clang clang-tools-extra                          // Arch Linux/Manjaro
     ```
@@ -73,6 +73,9 @@ make install
 #### Ninja (Linux)
 
 这里非常推荐 Linux 环境下使用 [Ninja](https://ninja-build.org/) 进行编译。
+
+!!! note
+    使用 ninja 编译项目时，需要确保系统中已有编译器。具体见下文 [GCC (Linux)](#gcc-linux) 一节。
 
 ??? tip "如何安装 Ninja"
     在不同的 Linux 发行版上，您可能需要使用不同的包管理器来安装 Ninja。

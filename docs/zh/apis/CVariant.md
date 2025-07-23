@@ -10,13 +10,6 @@ CVariant 是一个数据类型（并非容器），用于存储任意类型的�
 
 CVariant 类的结构定义如下：
 
-```c
-typedef struct {
-    void*    value;     
-    uint8_t  data_type; 
-} CVariant;
-```
-
 对应的成员变量如下：
 
 - `value`：数据值，用于存储任意类型的数据。
@@ -47,7 +40,6 @@ CVariant 类包含多种数据类型定义，具体如下表：
 | `TYPE_ENUM` | 16 | 枚举类型 | enum |
 | `TYPE_FUNCTION` | 17 | 函数指针类型 | function |
 | `TYPE_CUSTOM` | 18 | 自定义类型 | custom |
-
 
 ## 专用类型定义
 

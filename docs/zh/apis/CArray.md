@@ -9,13 +9,6 @@ CArray 是一个静态数组，用于存储多个 [CVariant](CVariant.md) 类型
 
 由以下两个成员变量存储，总共占用 16 字节：
 
-```c
-typedef struct {
-    CVariant* elements;
-    size_t length;
-} CArray;
-```
-
 - `elements`：指向 [CVariant](CVariant.md) 数组的指针。
 - `length`：数组的长度。
 

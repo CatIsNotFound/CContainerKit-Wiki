@@ -13,7 +13,7 @@ CVector 是一个动态数组，用于存储多个 [CVariant](CVariant.md) 类�
 ## 构造函数
 
 !!! warning "注意"
-    以下构造函数必须经过[析构函数](#_12)才能彻底销毁。否则会导致内存泄漏！
+    以下构造函数必须经过[析构函数](#_15)才能彻底销毁。否则会导致内存泄漏！
 
 ### `vectorInit()`
 
@@ -271,7 +271,7 @@ void _vectorInsert(CVector* vector, size_t index, CVariant new_value);
 
 #### 函数原型
 
-见 [`_vectorInsert()`](#_32) 原型函数介绍。
+见 [`_vectorInsert()`](#_35) 原型函数介绍。
 
 #### 参数
 
@@ -292,7 +292,7 @@ void _vectorInsert(CVector* vector, size_t index, CVariant new_value);
 
 #### 函数原型
 
-见 [`_vectorInsert()`](#_32) 原型函数介绍。
+见 [`_vectorInsert()`](#_35) 原型函数介绍。
 
 #### 参数
 
@@ -388,5 +388,297 @@ vectorInsertFromArray(vec, 2, arr);
 
 在指定 CVector 类的对象中，将 [CArray](CArray.md) 数组追加到 CVector 类的开头。
 
+### `vecRemove()`
+
+#### 宏函数
+
+```c
+#define vecRemove(vector, start_pos, count)      _vectorRemove(&vector, start_pos, count)
+```
+
+#### 函数原型
+
+```c
+void _vectorRemove(CVector* vector, size_t start_pos, size_t count);
+```
+
+#### 参数
+
+- `vector`: 指定 CVector 类的对象
+- `start_pos`: 起始位置
+- `count`: 要删除的元素数量
+
+#### 功能
+
+删除 CVector 类的对象中指定范围内的元素。
+
+### `vecRemoveOne()`
+
+#### 宏函数
+
+```c
+#define vecRemoveOne(vector, index)              _vectorRemove(&vector, index, 1)
+```
+
+#### 函数原型
+
+见 [`_vectorRemove()`](CVector.md#_60) 函数原型。
+
+#### 参数
+
+- `vector`: 删除的 CVector 类的对象
+- `index`: 删除的索引位置
+
+#### 功能
+
+删除 CVector 类的对象中指定索引位置的元素。
+
+### `vecPopBack()`
+
+#### 宏函数
+
+```c
+#define vecPopBack(vector)                       _vectorRemove(&vector, vector.length - 1, 1)
+```
+
+#### 函数原型
+
+见 [`_vectorRemove()`](CVector.md#_60) 函数原型。
+
+#### 参数
+
+- `vector`: 删除的 CVector 类的对象
+
+#### 功能
+
+删除 CVector 类的对象中的最后一个元素。
+
+### `vecPopFront()`
+
+#### 宏函数
+
+```c
+#define vecPopFront(vector)                      _vectorRemove(&vector, 0, 1)
+```
+
+#### 函数原型
+
+见 [`_vectorRemove()`](CVector.md#_60) 函数原型。
+
+#### 参数
+
+- `vector`: 删除的 CVector 类的对象
+
+#### 功能
+
+删除 CVector 类的对象中的第一个元素。
+
+### `vecClear()`
+
+#### 宏函数
+
+```c
+#define vecClear(vector)                         _vectorClear(&vector)
+```
+
+#### 函数原型
+
+```c
+void _vectorClear(CVector *vector);
+```
+
+#### 参数
+
+- `vector`: 删除的 CVector 类的对象
+
+#### 功能
+
+删除 CVector 类的对象中的所有元素。
+
+## 访问元素函数
+
+### `vecIsContain()`
+
+#### 宏函数
+
+```c
+#define vecIsContain(vector, key, start_pos)     _vectorIsElementContain(&vector, key, start_pos)
+```
+
+#### 函数原型
+
+```c
+bool _vectorIsElementContain(CVector* vector, CVariant key, size_t start_pos);
+```
+
+#### 参数
+
+- `vector`: 指向 CVector 类的对象的指针
+- `key`: 指定要查找的元素
+- `start_pos`: 指定开始查找的索引位置
+
+#### 功能
+
+判断 CVector 类的对象中是否包含指定元素。
+
+### `vecIndexOf()`
+
+#### 宏函数
+
+```c
+#define vecIndexOf(vector, key, start_pos)       _vectorIndexOf(&vector, key, start_pos)
+```
+
+#### 函数原型
+
+```c
+size_t _vectorIndexOf(CVector *vector, CVariant element, size_t start_pos);
+```
+
+#### 参数
+
+- `vector`: 指向 CVector 类的对象的指针
+- `element`: 指定要查找的元素
+- `start_pos`: 指定开始查找的索引位置
+
+#### 功能
+
+返回 CVector 类的对象中指定元素的索引位置。如果未找到指定元素，返回 `N_POS` 或 `SIZE_MAX`。
+
+### `vecAt()`
+
+#### 宏函数
+
+```c
+#define vecAt(vector, index)                     _vectorAt(&vector, index)
+```
+
+#### 函数原型
+
+```c
+CVariant _vectorAt(CVector *vector, size_t index);
+```
+
+#### 参数
+
+- `vector`: 指向 CVector 类的对象的指针
+- `index`: 指定要访问的元素的索引位置
+
+#### 功能
+
+返回 CVector 类的对象中指定索引位置的元素。如果索引超出范围，返回空类型的元素（[`varEmpty()`](CVariant.md#varempty)）。
+
+## 修改元素函数
+
+### `vecModify()`
+
+#### 宏函数
+
+```c
+#define vecModify(vector, index, new_var)        _vectorModify(&vector, index, new_var)
+```
+
+#### 函数原型
+
+```c
+bool _vectorModify(CVector *vector, size_t index, CVariant new_var);
+```
+
+#### 参数
+
+- `vector`: 指向 CVector 类的对象的指针
+- `index`: 索引位置
+- `new_var`: 新的元素
+
+#### 功能
+
+修改 CVector 类的对象中指定索引位置的元素，并返回 `true`；若索引超出范围，则返回 `false`。
+
+### `vecFill()`
+
+#### 宏函数
+
+```c
+#define vecFill(vector, start_pos, count, var)   _vectorFill(&vector, start_pos, count, var)
+```
+
+#### 函数原型
+
+```c
+void _vectorFill(CVector* vector, size_t start_pos, uint32_t count, CVariant new_value);
+```
+
+#### 参数
+
+- `vector`: 指向 CVector 类的对象的指针
+- `start_pos`: 起始位置
+- `count`: 要填充的元素数量
+- `new_value`: 要填充的新元素
+
+#### 功能
+
+填充 CVector 类的对象中指定范围内的元素为新元素。
+
+### `vecFillAll()`
+
+#### 宏函数
+
+```c
+#define vecFillAll(vector, var)                  _vectorFill(&vector, 0, vector.length, var)
+```
+
+#### 函数原型
+
+见 [`_vectorFill()`](CVector.md#_98) 函数原型。
+
+#### 参数
+
+- `vector`: 填充的 CVector 类的对象
+- `var`: 要填充的新元素
+
+#### 功能
+
+填充 CVector 类的对象中的**所有元素**为新元素。
+
+## 其它函数
+
+### `vecSubVector()`
+
+#### 宏函数
+
+```c
+#define vecSubVector(vector, start_pos, count)   _vectorSubVec(&vector, start_pos, count)
+```
+
+#### 函数原型
+
+```c
+CVector _vectorSubVec(CVector* vector, size_t start_pos, uint32_t count);
+```
+
+#### 参数
+
+- `vector`: 指向 CVector 类的对象的指针
+- `start_pos`: 起始位置
+- `count`: 要提取的元素数量
+
+#### 功能
+
+返回 CVector 类的对象中指定范围内的元素组成的新的 CVector 类的对象。
+
+#### 示例
+
+从 `vector1` 中提取索引位置为 1 开始取 3 个元素，并保存在 `vector2` 中：
+
+```c
+CVector vector1 = vectorList(5, varInt(1), varInt(2), varInt(3), varInt(4), varInt(5));
+CVector vector2 = vecSubVector(vector1, 1, 3);
+for (size_t i = 0; i < vector2.length; ++i) {
+    printVarData(vector2.data[i]);
+    printf(", ");
+}
+```
+
+`vector2` 的元素为：`2, 3, 4`。
 
 

@@ -49,9 +49,9 @@ On MacOS/Linux, compile the project using [Clang](https://clang.llvm.org/).
     You can install Clang via your package manager (typically using `apt` or `dnf`).
 
     ```bash
-    sudo apt install clang clang++ lldb lld clang-format clang-tidy  # Debian/Ubuntu
-    sudo dnf install clang clang-devel lldb lld                      # Fedora/CentOS/RHEL
-    sudo pacman -S clang clang-tools-extra                           # Arch Linux/Manjaro
+    sudo apt install clang lldb lld make                            // Debian/Ubuntu
+    sudo dnf install clang clang-devel lldb lld                     // Fedora/CentOS/RHEL
+    sudo pacman -S clang clang-tools-extra                          // Arch Linux/Manjaro
     ```
 
 Enter the `CContainerKit` directory and execute the following commands to compile the project:
@@ -74,6 +74,9 @@ make install
 #### Ninja (Linux)
 
 It is highly recommended to use [Ninja](https://ninja-build.org/) for compilation in a Linux environment. *(Note: Ninja needs to be installed via package manager or downloaded from [Github](https://github.com/ninja-build/ninja/releases))*
+
+!!! note
+    When compiling the project using ninja, make sure a compiler is already installed on your system. See the [GCC (Linux)](#gcc-linux) section below for details.
 
 ??? tip "How to install ninja"
     On different Linux distributions, you may need to use different package managers to install Ninja.
