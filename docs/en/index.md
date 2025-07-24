@@ -12,7 +12,7 @@ CContainerKit is a collection of C containers based on the C11 standard.
 
 ## Quick Start
 
-Visit the [QuickStart page](quickstart/index.md) to get started with this library quickly.
+Visit the [Quick Start page](quickstart/index.md) to get started with this library quickly.
 
 ## API Reference
 

@@ -21,25 +21,25 @@ CVariant 类包含多种数据类型定义，具体如下表：
 
 | 数据类型 | 对应值 | 描述 | 输出时显示内容 |
 | --- | --- | --- | --- |
-| `TYPE_NULL` | 0 | 空类型 | undefined |
-| `TYPE_BOOL` | 1 | 布尔类型 | bool |
-| `TYPE_INT8` | 2 | 有符号 8 位整数类型 | signed char (int8) |
-| `TYPE_UINT8` | 3 | 无符号 8 位整数类型 | unsigned char (uint8) |
-| `TYPE_INT16` | 4 | 有符号 16 位整数类型 | short (int16) |
-| `TYPE_UINT16` | 5 | 无符号 16 位整数类型 | unsigned short (uint16) |
-| `TYPE_INT32` | 6 | 有符号 32 位整数类型 | int (int32) |
-| `TYPE_UINT32` | 7 | 无符号 32 位整数类型 | unsigned int (uint32) |
-| `TYPE_INT64` | 8 | 有符号 64 位整数类型 | long long int (int64) |
-| `TYPE_UINT64` | 9 | 无符号 64 位整数类型 | unsigned long long int (uint64) |
-| `TYPE_FLOAT` | 10 | 单精度浮点数类型 | float |
-| `TYPE_DOUBLE` | 11 | 双精度浮点数类型 | double |
-| `TYPE_LONG_DOUBLE` | 12 | 长精度浮点数类型 | long double |
-| `TYPE_POINTER` | 13 | 指针类型 | void* (pointer) |
-| `TYPE_STRING` | 14 | 字符串类型 `(const char *)` | string (const char *) |
-| `TYPE_STRUCT` | 15 | 结构体类型 | struct |
-| `TYPE_ENUM` | 16 | 枚举类型 | enum |
-| `TYPE_FUNCTION` | 17 | 函数指针类型 | function |
-| `TYPE_CUSTOM` | 18 | 自定义类型 | custom |
+| `TYPE_NULL` | `0x00` | 空类型 | undefined |
+| `TYPE_BOOL` | `0x01` | 布尔类型 | bool |
+| `TYPE_INT8` | `0x02` | 有符号 8 位整数类型 | signed char (int8) |
+| `TYPE_UINT8` | `0x03` | 无符号 8 位整数类型 | unsigned char (uint8) |
+| `TYPE_INT16` | `0x04` | 有符号 16 位整数类型 | short (int16) |
+| `TYPE_UINT16` | `0x05` | 无符号 16 位整数类型 | unsigned short (uint16) |
+| `TYPE_INT32` | `0x06` | 有符号 32 位整数类型 | int (int32) |
+| `TYPE_UINT32` | `0x07` | 无符号 32 位整数类型 | unsigned int (uint32) |
+| `TYPE_INT64` | `0x08` | 有符号 64 位整数类型 | long long int (int64) |
+| `TYPE_UINT64` | `0x09` | 无符号 64 位整数类型 | unsigned long long int (uint64) |
+| `TYPE_FLOAT` | `0x0A` | 单精度浮点数类型 | float |
+| `TYPE_DOUBLE` | `0x0B` | 双精度浮点数类型 | double |
+| `TYPE_LONG_DOUBLE` | `0x0C` | 长精度浮点数类型 | long double |
+| `TYPE_POINTER` | `0x0D` | 指针类型 | void* (pointer) |
+| `TYPE_STRING` | `0x0E` | 字符串类型 `(const char *)` | string (const char *) |
+| `TYPE_STRUCT` | `0x0F` | 结构体类型 | struct |
+| `TYPE_ENUM` | `0x10` | 枚举类型 | enum |
+| `TYPE_FUNCTION` | `0x11` | 函数指针类型 | function |
+| `TYPE_CUSTOM` | `0x12` | 自定义类型 | custom |
 
 ## 专用类型定义
 
@@ -150,7 +150,7 @@ CVariant varEmpty(void);
 
 - `CVariant`：返回一个空类型 (类似于 `void`) 的空对象。
 
-#### 描述
+#### 功能
 
 - 该函数用于创建一个 `CVariant` 类型的对象，其数据类型为 [`TYPE_NULL`](#_3)，数据值为 `NULL`。
 
@@ -176,7 +176,7 @@ CVariant _varBool(bool value);
 
 - `CVariant`：返回一个 `CVariant` 类型的对象。
 
-#### 描述
+#### 功能
 
 - 该函数用于创建一个 `CVariant` 类型的对象，其数据类型为 [`TYPE_BOOL`](#_3)，数据值为 `value`。
 
@@ -202,7 +202,7 @@ CVariant _varInt8(int8_t value);
 
 - `CVariant`：返回一个 `CVariant` 类型的对象。
 
-#### 描述
+#### 功能
 
 - 该函数用于创建一个 `CVariant` 类型的对象，其数据类型为 [`TYPE_INT8`](#_3)，数据值为 `value`。
 
@@ -228,7 +228,7 @@ CVariant _varUInt8(uint8_t value);
 
 - `CVariant`：返回一个 `CVariant` 类型的对象。
 
-#### 描述
+#### 功能
 
 - 该函数用于创建一个 `CVariant` 类型的对象，其数据类型为 [`TYPE_UINT8`](#_3)，数据值为 `value`。
 
@@ -253,7 +253,7 @@ CVariant _varInt16(int16_t value);
 
 - `CVariant`：返回一个 `CVariant` 类型的对象。
 
-#### 描述
+#### 功能
 
 - 该函数用于创建一个 `CVariant` 类型的对象，其数据类型为 [`TYPE_INT16`](#_3)，数据值为 `value`。
 
@@ -279,7 +279,7 @@ CVariant _varUInt16(uint16_t value);
 
 - `CVariant`：返回一个 `CVariant` 类型的对象。
 
-#### 描述
+#### 功能
 
 - 该函数用于创建一个 `CVariant` 类型的对象，其数据类型为 [`TYPE_UINT16`](#_3)，数据值为 `value`。
 
@@ -305,7 +305,7 @@ CVariant _varInt32(int32_t value);
 
 - `CVariant`：返回一个 `CVariant` 类型的对象。
 
-#### 描述
+#### 功能
 
 - 该函数用于创建一个 `CVariant` 类型的对象，其数据类型为 [`TYPE_INT32`](#_3)，数据值为 `value`。
 
@@ -331,7 +331,7 @@ CVariant _varUInt32(uint32_t value);
 
 - `CVariant`：返回一个 `CVariant` 类型的对象。
 
-#### 描述
+#### 功能
 
 - 该函数用于创建一个 `CVariant` 类型的对象，其数据类型为 [`TYPE_UINT32`](#_3)，数据值为 `value`。
 
@@ -357,7 +357,7 @@ CVariant _varInt64(int64_t value);
 
 - `CVariant`：返回一个 `CVariant` 类型的对象。
 
-#### 描述
+#### 功能
 
 - 该函数用于创建一个 `CVariant` 类型的对象，其数据类型为 [`TYPE_INT64`](#_3)，数据值为 `value`。
 
@@ -383,7 +383,7 @@ CVariant _varUInt64(uint64_t value);
 
 - `CVariant`：返回一个 `CVariant` 类型的对象。
 
-#### 描述
+#### 功能
 
 - 该函数用于创建一个 `CVariant` 类型的对象，其数据类型为 [`TYPE_UINT64`](#_3)，数据值为 `value`。
 
@@ -409,7 +409,7 @@ CVariant _varFloat(float value);
 
 - `CVariant`：返回一个 `CVariant` 类型的对象。
 
-#### 描述
+#### 功能
 
 - 该函数用于创建一个 `CVariant` 类型的对象，其数据类型为 [`TYPE_FLOAT`](#_3)，数据值为 `value`。
 
@@ -435,7 +435,7 @@ CVariant _varDouble(double value);
 
 - `CVariant`：返回一个 `CVariant` 类型的对象。
 
-#### 描述
+#### 功能
 
 - 该函数用于创建一个 `CVariant` 类型的对象，其数据类型为 [`TYPE_DOUBLE`](#_3)，数据值为 `value`。
 
@@ -461,7 +461,7 @@ CVariant _varLongDouble(long double value);
 
 - `CVariant`：返回一个 `CVariant` 类型的对象。
 
-#### 描述
+#### 功能
 
 - 该函数用于创建一个 `CVariant` 类型的对象，其数据类型为 [`TYPE_LONG_DOUBLE`](#_3)，数据值为 `value`。
 
@@ -487,7 +487,7 @@ CVariant _varPointer(void* value);
 
 - `CVariant`：返回一个 `CVariant` 类型的对象。
 
-#### 描述
+#### 功能
 
 - 该函数用于创建一个 `CVariant` 类型的对象，其数据类型为 [`TYPE_POINTER`](#_3)，数据值为 `value`。
 
@@ -513,7 +513,7 @@ CVariant _varString(const char* value);
 
 - `CVariant`：返回一个 `CVariant` 类型的对象。
 
-#### 描述
+#### 功能
 
 - 该函数用于创建一个 `CVariant` 类型的对象，其数据类型为 [`TYPE_STRING`](#_3)，数据值为 `value`。
 
@@ -544,7 +544,7 @@ CVariant _varStruct(void* value, const char* type_name);
 
 - `CVariant`：返回一个 `CVariant` 类型的对象。
 
-#### 描述
+#### 功能
 
 - 该函数用于创建一个 `CVariant` 类型的对象，其数据类型为 [`TYPE_STRUCT`](#_3)，
   `value` 参数即为 [`VStruct`](#vstruct) 数据指针，`type_name` 参数即为结构体类型名称。
@@ -575,7 +575,7 @@ CVariant _varEnum(int8_t* value, const char* type_name);
 
 - `CVariant`：返回一个 `CVariant` 类型的对象。
 
-#### 描述
+#### 功能
 
 - 该函数用于创建一个 `CVariant` 类型的对象，其数据类型为 [`TYPE_ENUM`](#_3)，
   `value` 参数即为 [`VEnum`](#venum) 数据指针，`type_name` 参数即为枚举类型名称。
@@ -602,7 +602,7 @@ CVariant _varFunction(void (*value)(void*));
 
 - `CVariant`：返回一个 `CVariant` 类型的对象。
 
-#### 描述
+#### 功能
 
 - 该函数用于创建一个 `CVariant` 类型的对象，其数据类型为 [`TYPE_FUNCTION`](#_3)，
   `value` 参数即为函数指针。
@@ -634,7 +634,7 @@ CVariant _varCustom(void *value, const char *type_name, void (*destructor)(void 
 
 - `CVariant`：返回一个 `CVariant` 类型的对象。
 
-#### 描述
+#### 功能
 
 - 该函数用于创建一个 `CVariant` 类型的对象，其数据类型为 [`TYPE_CUSTOM`](#_3)，
   `value` 参数即为 [`VCustom`](#vcustom) 数据指针，`type_name` 参数即为自定义类型名称，`destructor` 参数即为自定义类型析构函数。

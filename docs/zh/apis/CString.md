@@ -59,6 +59,25 @@ printf("%s", str.data);
 
 通过输出其字符串，得到如下结果：`AAAAA`。
 
+### `varToString()`
+
+#### 函数原型
+
+```c
+CString varToString(CVariant variant);
+```
+
+#### 参数
+
+- `variant`：要转换的 [CVariant](#CVariant.md) 对象。
+
+#### 功能
+
+- 将 CVariant 对象转换为 CString 对象。
+
+!!! note "注意"
+    `variant` 参数必须为 `TYPE_STRING` 类型，否则将返回一个空字符串。
+
 ### `strList()`
 
 #### 函数原型

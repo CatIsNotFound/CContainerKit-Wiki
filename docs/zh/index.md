@@ -12,7 +12,7 @@ CContainerKit 是基于 C11 标准的 C 语言容器集合。
 
 ## 快速入门
 
-访问 [QuickStart 页面](quickstart/index.md)以快速上手使用此库。
+访问 [快速入门页面](quickstart/index.md)以快速上手使用此库。
 
 ## API 参考
 

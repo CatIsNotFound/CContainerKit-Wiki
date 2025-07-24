@@ -159,6 +159,31 @@ void _deleteArray(CArray *arr);
 
 ## 元素相关函数
 
+### `arrayExpand()`
+
+#### 宏函数
+
+```c
+#define arrayExpand(array, new_length)           _arrayExpand(&array, new_length)
+```
+
+#### 函数原型
+
+```c
+void _arrayExpand(CArray *array, size_t length);
+```
+
+#### 参数
+
+- `array`：指向要操作的 CArray 数组的指针。
+- `length`：新的长度。
+
+#### 功能
+
+- 扩展 CArray 数组的长度。
+- 如果新的长度小于当前长度，将不会进行任何操作。
+- 如果新的长度大于当前长度，将扩展数组长度并将新增的元素初始化为空值。
+
 ### `arrayErase()`
 
 #### 宏函数
@@ -210,21 +235,45 @@ void _arrayEraseAll(CArray *array);
 
 #### 功能
 
-- 释放 CArray 数组中的所有元素并将其填充为[空值]()。
+- 释放 CArray 数组中的所有元素并将其填充为空值。
+
+### `arrayIsEqual()`
+
+#### 宏函数
+
+```c
+#define arrayIsEqual(array, key, pos, cmp)       _arrayIsElementEqual(&array, key, pos, cmp)
+```
+
+#### 函数原型
+
+```c
+bool _arrayIsElementEqual(CArray *array, CVariant key, size_t pos, CmpFunc cmp);
+```
+
+#### 参数
+
+- `array`：指向要操作的 CArray 数组的指针。
+- `key`：要查找的元素。
+- `pos`：起始位置。
+- `cmp`：比较函数指针，用于自定义元素的比较方式。如果为 `NULL`，则使用默认的比较方式。
+
+#### 功能
+
+- 比较 CArray 数组中指定位置的元素是否与指定的元素相等。
+- 如果相等，返回 `true`；否则返回 `false`。
 
 ### `arrayIsContain()`
 
 #### 宏函数
 
 ```c
-#define arrayIsContain(array, key, pos)          _arrayIsElementContain(&array, key, pos)
+#define arrayIsContain(array, key, pos)          _arrayIsElementEqual(&array, key, pos, NULL)
 ```
 
 #### 函数原型
 
-```c
-bool _arrayIsElementContain(CArray *array, CVariant key, size_t pos);
-```
+见 [`arrayIsEqual()`](#arrayisequal) 函数原型。
 
 #### 参数
 

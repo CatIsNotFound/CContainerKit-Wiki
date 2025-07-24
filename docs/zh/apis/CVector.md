@@ -664,7 +664,7 @@ CVector _vectorSubVec(CVector* vector, size_t start_pos, uint32_t count);
 
 #### 功能
 
-返回 CVector 类的对象中指定范围内的元素组成的新的 CVector 类的对象。
+- 返回 CVector 类的对象中指定范围内的元素组成的新的 CVector 类的对象。
 
 #### 示例
 
@@ -681,4 +681,54 @@ for (size_t i = 0; i < vector2.length; ++i) {
 
 `vector2` 的元素为：`2, 3, 4`。
 
+### `resizeVector()` / `assignVector()`
+
+#### 宏函数
+
+```c
+#define resizeVector(vector, new_size)           _resizeVector(&vector, new_size)
+#define assignVector(vector, new_size)           _resizeVector(&vector, new_size)
+```
+
+#### 函数原型
+
+```c
+void _resizeVector(CVector* vector, size_t new_size);
+```
+
+#### 参数
+
+- `vector`: 指向 CVector 类的对象的指针
+- `new_size`: 新的大小
+
+#### 功能
+
+- 调整 CVector 类的对象的容量（即 [`capacity`](CVector.md#_1) 成员变量）设置为新的大小，并重新分配新的内存。
+
+!!! note "注意"
+    该函数**不支持直接缩小当前对象的大小**。如有需求，请调用 [`shrinkToFitVector()`](CVector.md#shrinktofitvector) 函数。
+
+### `shrinkToFitVector()`
+
+#### 宏函数
+
+```c
+#define shrinkToFitVector(vector, new_size)      _shrinkToFitVector(&vector, new_size)
+```
+
+#### 函数原型
+
+```c
+void _shrinkToFitVector(CVector* vector, size_t new_size);
+```
+
+#### 参数
+
+- `vector`: 指向 CVector 类的对象的指针。
+- `new_size`: 新的数组大小。
+
+#### 功能
+
+- 调整 CVector 类的对象的容量（即 [`capacity`](CVector.md#_1) 成员变量）设置为新的大小，并重新分配新的内存。
+- 缩小原有容量：若 `new_size` 小于当前对象的长度（即 [`size`](CVector.md#_1) 成员变量），则删除并丢弃多余的元素。
 
