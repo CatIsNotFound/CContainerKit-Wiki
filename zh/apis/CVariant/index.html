@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://catisnotfound.github.io/CContainerKit-Wiki/zh/apis/CVariant/">
       
       
-        <link rel="prev" href="../CString/">
+        <link rel="prev" href="../CLinkedList/">
       
       
         <link rel="next" href="../CDebug/">
@@ -47,6 +47,10 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../../css/timeago.css">
+    
+      <link rel="stylesheet" href="../../../css/timeago.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -372,6 +376,46 @@
   
   
   
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Containers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Containers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../CArray/" class="md-nav__link">
         
@@ -434,6 +478,125 @@
   
 
               
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CStack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CStack
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CQueue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CQueue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLinkedList/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CLinkedList
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Common/Misc
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Common/Misc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -601,9 +764,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_varempty" class="md-nav__link">
+  <a href="#varempty" class="md-nav__link">
     <span class="md-ellipsis">
-      _varEmpty()
+      varEmpty()
     </span>
   </a>
   
@@ -787,33 +950,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_varintmodifydata" class="md-nav__link">
-    <span class="md-ellipsis">
-      _varIntModifyData()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_varuintmodifydata" class="md-nav__link">
-    <span class="md-ellipsis">
-      _varUIntModifyData()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#varboolmodifydata" class="md-nav__link">
-    <span class="md-ellipsis">
-      varBoolModifyData()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#varintmodifydata" class="md-nav__link">
     <span class="md-ellipsis">
       varIntModifyData()
@@ -831,13 +967,22 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#varboolmodifydata" class="md-nav__link">
+    <span class="md-ellipsis">
+      varBoolModifyData()
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_119" class="md-nav__link">
+  <a href="#_117" class="md-nav__link">
     <span class="md-ellipsis">
       销毁函数
     </span>
@@ -856,7 +1001,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_124" class="md-nav__link">
+  <a href="#_122" class="md-nav__link">
     <span class="md-ellipsis">
       示例
     </span>
@@ -870,7 +1015,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_125" class="md-nav__link">
+  <a href="#_123" class="md-nav__link">
     <span class="md-ellipsis">
       变体值访问函数
     </span>
@@ -1029,7 +1174,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_188" class="md-nav__link">
+  <a href="#_186" class="md-nav__link">
     <span class="md-ellipsis">
       其它函数
     </span>
@@ -1079,6 +1224,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1271,9 +1424,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_varempty" class="md-nav__link">
+  <a href="#varempty" class="md-nav__link">
     <span class="md-ellipsis">
-      _varEmpty()
+      varEmpty()
     </span>
   </a>
   
@@ -1457,33 +1610,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_varintmodifydata" class="md-nav__link">
-    <span class="md-ellipsis">
-      _varIntModifyData()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_varuintmodifydata" class="md-nav__link">
-    <span class="md-ellipsis">
-      _varUIntModifyData()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#varboolmodifydata" class="md-nav__link">
-    <span class="md-ellipsis">
-      varBoolModifyData()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#varintmodifydata" class="md-nav__link">
     <span class="md-ellipsis">
       varIntModifyData()
@@ -1501,13 +1627,22 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#varboolmodifydata" class="md-nav__link">
+    <span class="md-ellipsis">
+      varBoolModifyData()
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_119" class="md-nav__link">
+  <a href="#_117" class="md-nav__link">
     <span class="md-ellipsis">
       销毁函数
     </span>
@@ -1526,7 +1661,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_124" class="md-nav__link">
+  <a href="#_122" class="md-nav__link">
     <span class="md-ellipsis">
       示例
     </span>
@@ -1540,7 +1675,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_125" class="md-nav__link">
+  <a href="#_123" class="md-nav__link">
     <span class="md-ellipsis">
       变体值访问函数
     </span>
@@ -1699,7 +1834,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_188" class="md-nav__link">
+  <a href="#_186" class="md-nav__link">
     <span class="md-ellipsis">
       其它函数
     </span>
@@ -1747,11 +1882,6 @@
 <p>关于此节，这里需要着重介绍并说明：</p>
 <h3 id="_2">结构定义<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>CVariant 类的结构定义如下：</p>
-<div class="highlight"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">void</span><span class="o">*</span><span class="w">    </span><span class="n">value</span><span class="p">;</span><span class="w">     </span>
-<span class="w">    </span><span class="kt">uint8_t</span><span class="w">  </span><span class="n">data_type</span><span class="p">;</span><span class="w"> </span>
-<span class="p">}</span><span class="w"> </span><span class="n">CVariant</span><span class="p">;</span>
-</code></pre></div>
 <p>对应的成员变量如下：</p>
 <ul>
 <li><code>value</code>：数据值，用于存储任意类型的数据。</li>
@@ -1771,115 +1901,115 @@
 <tbody>
 <tr>
 <td><code>TYPE_NULL</code></td>
-<td>0</td>
+<td><code>0x00</code></td>
 <td>空类型</td>
 <td>undefined</td>
 </tr>
 <tr>
 <td><code>TYPE_BOOL</code></td>
-<td>1</td>
+<td><code>0x01</code></td>
 <td>布尔类型</td>
 <td>bool</td>
 </tr>
 <tr>
 <td><code>TYPE_INT8</code></td>
-<td>2</td>
+<td><code>0x02</code></td>
 <td>有符号 8 位整数类型</td>
 <td>signed char (int8)</td>
 </tr>
 <tr>
 <td><code>TYPE_UINT8</code></td>
-<td>3</td>
+<td><code>0x03</code></td>
 <td>无符号 8 位整数类型</td>
 <td>unsigned char (uint8)</td>
 </tr>
 <tr>
 <td><code>TYPE_INT16</code></td>
-<td>4</td>
+<td><code>0x04</code></td>
 <td>有符号 16 位整数类型</td>
 <td>short (int16)</td>
 </tr>
 <tr>
 <td><code>TYPE_UINT16</code></td>
-<td>5</td>
+<td><code>0x05</code></td>
 <td>无符号 16 位整数类型</td>
 <td>unsigned short (uint16)</td>
 </tr>
 <tr>
 <td><code>TYPE_INT32</code></td>
-<td>6</td>
+<td><code>0x06</code></td>
 <td>有符号 32 位整数类型</td>
 <td>int (int32)</td>
 </tr>
 <tr>
 <td><code>TYPE_UINT32</code></td>
-<td>7</td>
+<td><code>0x07</code></td>
 <td>无符号 32 位整数类型</td>
 <td>unsigned int (uint32)</td>
 </tr>
 <tr>
 <td><code>TYPE_INT64</code></td>
-<td>8</td>
+<td><code>0x08</code></td>
 <td>有符号 64 位整数类型</td>
 <td>long long int (int64)</td>
 </tr>
 <tr>
 <td><code>TYPE_UINT64</code></td>
-<td>9</td>
+<td><code>0x09</code></td>
 <td>无符号 64 位整数类型</td>
 <td>unsigned long long int (uint64)</td>
 </tr>
 <tr>
 <td><code>TYPE_FLOAT</code></td>
-<td>10</td>
+<td><code>0x0A</code></td>
 <td>单精度浮点数类型</td>
 <td>float</td>
 </tr>
 <tr>
 <td><code>TYPE_DOUBLE</code></td>
-<td>11</td>
+<td><code>0x0B</code></td>
 <td>双精度浮点数类型</td>
 <td>double</td>
 </tr>
 <tr>
 <td><code>TYPE_LONG_DOUBLE</code></td>
-<td>12</td>
+<td><code>0x0C</code></td>
 <td>长精度浮点数类型</td>
 <td>long double</td>
 </tr>
 <tr>
 <td><code>TYPE_POINTER</code></td>
-<td>13</td>
+<td><code>0x0D</code></td>
 <td>指针类型</td>
 <td>void* (pointer)</td>
 </tr>
 <tr>
 <td><code>TYPE_STRING</code></td>
-<td>14</td>
+<td><code>0x0E</code></td>
 <td>字符串类型 <code>(const char *)</code></td>
 <td>string (const char *)</td>
 </tr>
 <tr>
 <td><code>TYPE_STRUCT</code></td>
-<td>15</td>
+<td><code>0x0F</code></td>
 <td>结构体类型</td>
 <td>struct</td>
 </tr>
 <tr>
 <td><code>TYPE_ENUM</code></td>
-<td>16</td>
+<td><code>0x10</code></td>
 <td>枚举类型</td>
 <td>enum</td>
 </tr>
 <tr>
 <td><code>TYPE_FUNCTION</code></td>
-<td>17</td>
+<td><code>0x11</code></td>
 <td>函数指针类型</td>
 <td>function</td>
 </tr>
 <tr>
 <td><code>TYPE_CUSTOM</code></td>
-<td>18</td>
+<td><code>0x12</code></td>
 <td>自定义类型</td>
 <td>custom</td>
 </tr>
@@ -1888,7 +2018,7 @@
 <h2 id="_4">专用类型定义<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>CVariant 类针对某些特殊或复杂数据类型，定义了专用类型定义，具体如下：</p>
 <h3 id="vstruct">VStruct<a class="headerlink" href="#vstruct" title="Permanent link">&para;</a></h3>
-<p><code>VStruct</code> 是针对于类型为 <code>TYPE_STRUCT</code> 的数据结构，具体结构如下：</p>
+<p><code>VStruct</code> 是针对于类型为 <a href="#_3"><code>TYPE_STRUCT</code></a> 的数据结构，具体结构如下：</p>
 <div class="highlight"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">VStruct</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">type_name</span><span class="p">;</span>
@@ -1912,7 +2042,7 @@
 </ul>
 </div>
 <h3 id="venum">VEnum<a class="headerlink" href="#venum" title="Permanent link">&para;</a></h3>
-<p><code>VEnum</code> 是针对于类型为 <code>TYPE_ENUM</code> 的枚举类型，具体结构如下：</p>
+<p><code>VEnum</code> 是针对于类型为 <a href="#_3"><code>TYPE_ENUM</code></a> 的枚举类型，具体结构如下：</p>
 <div class="highlight"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">VEnum</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int8_t</span><span class="o">*</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">type_name</span><span class="p">;</span>
@@ -1924,7 +2054,7 @@
 <li><code>type_name</code>：枚举类型名称。</li>
 </ul>
 <h3 id="vcustom">VCustom<a class="headerlink" href="#vcustom" title="Permanent link">&para;</a></h3>
-<p><code>VCustom</code> 是针对于类型为 <code>TYPE_CUSTOM</code> 的自定义类型，具体结构如下：</p>
+<p><code>VCustom</code> 是针对于类型为 <a href="#_3"><code>TYPE_CUSTOM</code></a> 的自定义类型，具体结构如下：</p>
 <div class="highlight"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">VCustom</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">type_name</span><span class="p">;</span>
@@ -1935,10 +2065,6 @@
 <li><code>data</code>：自定义类型数据指针。</li>
 <li><code>type_name</code>：自定义类型名称。</li>
 </ul>
-<div class="admonition bug">
-<p class="admonition-title">Bug</p>
-<p>目前 <code>VCustom</code> 暂未使用，后续会进行完善。</p>
-</div>
 <h2 id="_5">获取变量数据类型<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p><code>CVariant</code> 可以用于获取变量数据类型。具体如下：</p>
 <h3 id="vartypename"><code>varTypeName()</code><a class="headerlink" href="#vartypename" title="Permanent link">&para;</a></h3>
@@ -1960,17 +2086,17 @@
 </div>
 <h2 id="_10">定义变量函数<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <p>CVariant 类对应不同的<a href="#_3">数据类型定义</a>，提供了多种其对应的定义变量函数，具体如下：</p>
-<h3 id="_varempty"><code>_varEmpty()</code><a class="headerlink" href="#_varempty" title="Permanent link">&para;</a></h3>
+<h3 id="varempty"><code>varEmpty()</code><a class="headerlink" href="#varempty" title="Permanent link">&para;</a></h3>
 <h4 id="_11">函数原型<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="n">CVariant</span><span class="w"> </span><span class="nf">_varEmpty</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="n">CVariant</span><span class="w"> </span><span class="nf">varEmpty</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 </code></pre></div>
 <h4 id="_12">返回值<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>CVariant</code>：返回一个空类型 (类似于 <code>void</code>) 的空对象。</li>
 </ul>
-<h4 id="_13">描述<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<h4 id="_13">功能<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
 <ul>
-<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <code>TYPE_NULL</code>，数据值为 <code>NULL</code>。</li>
+<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <a href="#_3"><code>TYPE_NULL</code></a>，数据值为 <code>NULL</code>。</li>
 </ul>
 <h3 id="varbool"><code>varBool()</code><a class="headerlink" href="#varbool" title="Permanent link">&para;</a></h3>
 <h4 id="_14">宏函数<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
@@ -1987,9 +2113,9 @@
 <ul>
 <li><code>CVariant</code>：返回一个 <code>CVariant</code> 类型的对象。</li>
 </ul>
-<h4 id="_18">描述<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<h4 id="_18">功能<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
 <ul>
-<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <code>TYPE_BOOL</code>，数据值为 <code>value</code>。</li>
+<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <a href="#_3"><code>TYPE_BOOL</code></a>，数据值为 <code>value</code>。</li>
 </ul>
 <h3 id="varchar"><code>varChar()</code><a class="headerlink" href="#varchar" title="Permanent link">&para;</a></h3>
 <h4 id="_19">宏函数<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
@@ -2006,9 +2132,9 @@
 <ul>
 <li><code>CVariant</code>：返回一个 <code>CVariant</code> 类型的对象。</li>
 </ul>
-<h4 id="_23">描述<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
+<h4 id="_23">功能<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
 <ul>
-<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <code>TYPE_INT8</code>，数据值为 <code>value</code>。</li>
+<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <a href="#_3"><code>TYPE_INT8</code></a>，数据值为 <code>value</code>。</li>
 </ul>
 <h3 id="varuchar"><code>varUChar()</code><a class="headerlink" href="#varuchar" title="Permanent link">&para;</a></h3>
 <h4 id="_24">宏函数<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
@@ -2025,9 +2151,9 @@
 <ul>
 <li><code>CVariant</code>：返回一个 <code>CVariant</code> 类型的对象。</li>
 </ul>
-<h4 id="_28">描述<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h4>
+<h4 id="_28">功能<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h4>
 <ul>
-<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <code>TYPE_UINT8</code>，数据值为 <code>value</code>。</li>
+<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <a href="#_3"><code>TYPE_UINT8</code></a>，数据值为 <code>value</code>。</li>
 </ul>
 <h3 id="varshort"><code>varShort()</code><a class="headerlink" href="#varshort" title="Permanent link">&para;</a></h3>
 <h4 id="_29">宏函数<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h4>
@@ -2044,9 +2170,9 @@
 <ul>
 <li><code>CVariant</code>：返回一个 <code>CVariant</code> 类型的对象。</li>
 </ul>
-<h4 id="_33">描述<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h4>
+<h4 id="_33">功能<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h4>
 <ul>
-<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <code>TYPE_INT16</code>，数据值为 <code>value</code>。</li>
+<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <a href="#_3"><code>TYPE_INT16</code></a>，数据值为 <code>value</code>。</li>
 </ul>
 <h3 id="varushort"><code>varUShort()</code><a class="headerlink" href="#varushort" title="Permanent link">&para;</a></h3>
 <h4 id="_34">宏函数<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h4>
@@ -2063,9 +2189,9 @@
 <ul>
 <li><code>CVariant</code>：返回一个 <code>CVariant</code> 类型的对象。</li>
 </ul>
-<h4 id="_38">描述<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h4>
+<h4 id="_38">功能<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h4>
 <ul>
-<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <code>TYPE_UINT16</code>，数据值为 <code>value</code>。</li>
+<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <a href="#_3"><code>TYPE_UINT16</code></a>，数据值为 <code>value</code>。</li>
 </ul>
 <h3 id="varint"><code>varInt()</code><a class="headerlink" href="#varint" title="Permanent link">&para;</a></h3>
 <h4 id="_39">宏函数<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h4>
@@ -2082,9 +2208,9 @@
 <ul>
 <li><code>CVariant</code>：返回一个 <code>CVariant</code> 类型的对象。</li>
 </ul>
-<h4 id="_43">描述<a class="headerlink" href="#_43" title="Permanent link">&para;</a></h4>
+<h4 id="_43">功能<a class="headerlink" href="#_43" title="Permanent link">&para;</a></h4>
 <ul>
-<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <code>TYPE_INT32</code>，数据值为 <code>value</code>。</li>
+<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <a href="#_3"><code>TYPE_INT32</code></a>，数据值为 <code>value</code>。</li>
 </ul>
 <h3 id="varuint"><code>varUInt()</code><a class="headerlink" href="#varuint" title="Permanent link">&para;</a></h3>
 <h4 id="_44">宏函数<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h4>
@@ -2101,9 +2227,9 @@
 <ul>
 <li><code>CVariant</code>：返回一个 <code>CVariant</code> 类型的对象。</li>
 </ul>
-<h4 id="_48">描述<a class="headerlink" href="#_48" title="Permanent link">&para;</a></h4>
+<h4 id="_48">功能<a class="headerlink" href="#_48" title="Permanent link">&para;</a></h4>
 <ul>
-<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <code>TYPE_UINT32</code>，数据值为 <code>value</code>。</li>
+<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <a href="#_3"><code>TYPE_UINT32</code></a>，数据值为 <code>value</code>。</li>
 </ul>
 <h3 id="varlonglong"><code>varLongLong()</code><a class="headerlink" href="#varlonglong" title="Permanent link">&para;</a></h3>
 <h4 id="_49">宏函数<a class="headerlink" href="#_49" title="Permanent link">&para;</a></h4>
@@ -2120,9 +2246,9 @@
 <ul>
 <li><code>CVariant</code>：返回一个 <code>CVariant</code> 类型的对象。</li>
 </ul>
-<h4 id="_53">描述<a class="headerlink" href="#_53" title="Permanent link">&para;</a></h4>
+<h4 id="_53">功能<a class="headerlink" href="#_53" title="Permanent link">&para;</a></h4>
 <ul>
-<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <code>TYPE_INT64</code>，数据值为 <code>value</code>。</li>
+<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <a href="#_3"><code>TYPE_INT64</code></a>，数据值为 <code>value</code>。</li>
 </ul>
 <h3 id="varulonglong"><code>varULongLong()</code><a class="headerlink" href="#varulonglong" title="Permanent link">&para;</a></h3>
 <h4 id="_54">宏函数<a class="headerlink" href="#_54" title="Permanent link">&para;</a></h4>
@@ -2139,9 +2265,9 @@
 <ul>
 <li><code>CVariant</code>：返回一个 <code>CVariant</code> 类型的对象。</li>
 </ul>
-<h4 id="_58">描述<a class="headerlink" href="#_58" title="Permanent link">&para;</a></h4>
+<h4 id="_58">功能<a class="headerlink" href="#_58" title="Permanent link">&para;</a></h4>
 <ul>
-<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <code>TYPE_UINT64</code>，数据值为 <code>value</code>。</li>
+<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <a href="#_3"><code>TYPE_UINT64</code></a>，数据值为 <code>value</code>。</li>
 </ul>
 <h3 id="varfloat"><code>varFloat()</code><a class="headerlink" href="#varfloat" title="Permanent link">&para;</a></h3>
 <h4 id="_59">宏函数<a class="headerlink" href="#_59" title="Permanent link">&para;</a></h4>
@@ -2158,9 +2284,9 @@
 <ul>
 <li><code>CVariant</code>：返回一个 <code>CVariant</code> 类型的对象。</li>
 </ul>
-<h4 id="_63">描述<a class="headerlink" href="#_63" title="Permanent link">&para;</a></h4>
+<h4 id="_63">功能<a class="headerlink" href="#_63" title="Permanent link">&para;</a></h4>
 <ul>
-<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <code>TYPE_FLOAT</code>，数据值为 <code>value</code>。</li>
+<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <a href="#_3"><code>TYPE_FLOAT</code></a>，数据值为 <code>value</code>。</li>
 </ul>
 <h3 id="vardouble"><code>varDouble()</code><a class="headerlink" href="#vardouble" title="Permanent link">&para;</a></h3>
 <h4 id="_64">宏函数<a class="headerlink" href="#_64" title="Permanent link">&para;</a></h4>
@@ -2177,9 +2303,9 @@
 <ul>
 <li><code>CVariant</code>：返回一个 <code>CVariant</code> 类型的对象。</li>
 </ul>
-<h4 id="_68">描述<a class="headerlink" href="#_68" title="Permanent link">&para;</a></h4>
+<h4 id="_68">功能<a class="headerlink" href="#_68" title="Permanent link">&para;</a></h4>
 <ul>
-<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <code>TYPE_DOUBLE</code>，数据值为 <code>value</code>。</li>
+<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <a href="#_3"><code>TYPE_DOUBLE</code></a>，数据值为 <code>value</code>。</li>
 </ul>
 <h3 id="varlongdouble"><code>varLongDouble()</code><a class="headerlink" href="#varlongdouble" title="Permanent link">&para;</a></h3>
 <h4 id="_69">宏函数<a class="headerlink" href="#_69" title="Permanent link">&para;</a></h4>
@@ -2196,9 +2322,9 @@
 <ul>
 <li><code>CVariant</code>：返回一个 <code>CVariant</code> 类型的对象。</li>
 </ul>
-<h4 id="_73">描述<a class="headerlink" href="#_73" title="Permanent link">&para;</a></h4>
+<h4 id="_73">功能<a class="headerlink" href="#_73" title="Permanent link">&para;</a></h4>
 <ul>
-<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <code>TYPE_LONG_DOUBLE</code>，数据值为 <code>value</code>。</li>
+<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <a href="#_3"><code>TYPE_LONG_DOUBLE</code></a>，数据值为 <code>value</code>。</li>
 </ul>
 <h3 id="varpointer"><code>varPointer()</code><a class="headerlink" href="#varpointer" title="Permanent link">&para;</a></h3>
 <h4 id="_74">宏函数<a class="headerlink" href="#_74" title="Permanent link">&para;</a></h4>
@@ -2215,9 +2341,9 @@
 <ul>
 <li><code>CVariant</code>：返回一个 <code>CVariant</code> 类型的对象。</li>
 </ul>
-<h4 id="_78">描述<a class="headerlink" href="#_78" title="Permanent link">&para;</a></h4>
+<h4 id="_78">功能<a class="headerlink" href="#_78" title="Permanent link">&para;</a></h4>
 <ul>
-<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <code>TYPE_POINTER</code>，数据值为 <code>value</code>。</li>
+<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <a href="#_3"><code>TYPE_POINTER</code></a>，数据值为 <code>value</code>。</li>
 </ul>
 <h3 id="varstring"><code>varString()</code><a class="headerlink" href="#varstring" title="Permanent link">&para;</a></h3>
 <h4 id="_79">宏函数<a class="headerlink" href="#_79" title="Permanent link">&para;</a></h4>
@@ -2234,9 +2360,9 @@
 <ul>
 <li><code>CVariant</code>：返回一个 <code>CVariant</code> 类型的对象。</li>
 </ul>
-<h4 id="_83">描述<a class="headerlink" href="#_83" title="Permanent link">&para;</a></h4>
+<h4 id="_83">功能<a class="headerlink" href="#_83" title="Permanent link">&para;</a></h4>
 <ul>
-<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <code>TYPE_STRING</code>，数据值为 <code>value</code>。</li>
+<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <a href="#_3"><code>TYPE_STRING</code></a>，数据值为 <code>value</code>。</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -2259,9 +2385,9 @@
 <ul>
 <li><code>CVariant</code>：返回一个 <code>CVariant</code> 类型的对象。</li>
 </ul>
-<h4 id="_88">描述<a class="headerlink" href="#_88" title="Permanent link">&para;</a></h4>
+<h4 id="_88">功能<a class="headerlink" href="#_88" title="Permanent link">&para;</a></h4>
 <ul>
-<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <code>TYPE_STRUCT</code>，
+<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <a href="#_3"><code>TYPE_STRUCT</code></a>，
   <code>value</code> 参数即为 <a href="#vstruct"><code>VStruct</code></a> 数据指针，<code>type_name</code> 参数即为结构体类型名称。</li>
 </ul>
 <div class="admonition warning">
@@ -2284,9 +2410,9 @@
 <ul>
 <li><code>CVariant</code>：返回一个 <code>CVariant</code> 类型的对象。</li>
 </ul>
-<h4 id="_93">描述<a class="headerlink" href="#_93" title="Permanent link">&para;</a></h4>
+<h4 id="_93">功能<a class="headerlink" href="#_93" title="Permanent link">&para;</a></h4>
 <ul>
-<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <code>TYPE_ENUM</code>，
+<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <a href="#_3"><code>TYPE_ENUM</code></a>，
   <code>value</code> 参数即为 <a href="#venum"><code>VEnum</code></a> 数据指针，<code>type_name</code> 参数即为枚举类型名称。</li>
 </ul>
 <h3 id="varfunction"><code>varFunction()</code><a class="headerlink" href="#varfunction" title="Permanent link">&para;</a></h3>
@@ -2304,9 +2430,9 @@
 <ul>
 <li><code>CVariant</code>：返回一个 <code>CVariant</code> 类型的对象。</li>
 </ul>
-<h4 id="_98">描述<a class="headerlink" href="#_98" title="Permanent link">&para;</a></h4>
+<h4 id="_98">功能<a class="headerlink" href="#_98" title="Permanent link">&para;</a></h4>
 <ul>
-<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <code>TYPE_FUNCTION</code>，
+<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <a href="#_3"><code>TYPE_FUNCTION</code></a>，
   <code>value</code> 参数即为函数指针。</li>
 </ul>
 <div class="admonition bug">
@@ -2330,9 +2456,9 @@
 <ul>
 <li><code>CVariant</code>：返回一个 <code>CVariant</code> 类型的对象。</li>
 </ul>
-<h4 id="_103">描述<a class="headerlink" href="#_103" title="Permanent link">&para;</a></h4>
+<h4 id="_103">功能<a class="headerlink" href="#_103" title="Permanent link">&para;</a></h4>
 <ul>
-<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <code>TYPE_CUSTOM</code>，
+<li>该函数用于创建一个 <code>CVariant</code> 类型的对象，其数据类型为 <a href="#_3"><code>TYPE_CUSTOM</code></a>，
   <code>value</code> 参数即为 <a href="#vcustom"><code>VCustom</code></a> 数据指针，<code>type_name</code> 参数即为自定义类型名称，<code>destructor</code> 参数即为自定义类型析构函数。</li>
 </ul>
 <div class="admonition bug">
@@ -2344,20 +2470,23 @@
 <p class="admonition-title">Note</p>
 <p>目前 CVariant 类仅针对部分<strong>不包含指针</strong>的数据类型提供了修改函数，后续将考虑是否更新。</p>
 </div>
-<h3 id="_varintmodifydata"><code>_varIntModifyData()</code><a class="headerlink" href="#_varintmodifydata" title="Permanent link">&para;</a></h3>
-<h4 id="_105">函数原型<a class="headerlink" href="#_105" title="Permanent link">&para;</a></h4>
+<h3 id="varintmodifydata"><code>varIntModifyData()</code><a class="headerlink" href="#varintmodifydata" title="Permanent link">&para;</a></h3>
+<h4 id="_105">宏函数<a class="headerlink" href="#_105" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="cp">#define varIntModifyData(variant, new_value) _varIntModifyValue(&amp;variant, new_value)</span>
+</code></pre></div>
+<h4 id="_106">函数原型<a class="headerlink" href="#_106" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">_varIntModifyValue</span><span class="p">(</span><span class="n">CVariant</span><span class="o">*</span><span class="w"> </span><span class="n">variant</span><span class="p">,</span><span class="w"> </span><span class="kt">int64_t</span><span class="w"> </span><span class="n">new_value</span><span class="p">);</span>
 </code></pre></div>
-<h4 id="_106">参数<a class="headerlink" href="#_106" title="Permanent link">&para;</a></h4>
+<h4 id="_107">参数<a class="headerlink" href="#_107" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>variant</code>：指向 <code>CVariant</code> 类型对象的指针。</li>
 <li><code>new_value</code>：新的整数值。</li>
 </ul>
-<h4 id="_107">功能<a class="headerlink" href="#_107" title="Permanent link">&para;</a></h4>
+<h4 id="_108">功能<a class="headerlink" href="#_108" title="Permanent link">&para;</a></h4>
 <ul>
 <li>该函数用于修改 <code>CVariant</code> 类型对象的数据值为新的整数值。</li>
 </ul>
-<h4 id="_108">示例<a class="headerlink" href="#_108" title="Permanent link">&para;</a></h4>
+<h4 id="_109">示例<a class="headerlink" href="#_109" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="n">CVariant</span><span class="w"> </span><span class="n">variant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">varInt</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
 <span class="n">_varIntModifyValue</span><span class="p">(</span><span class="o">&amp;</span><span class="n">variant</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span>
 </code></pre></div>
@@ -2368,20 +2497,23 @@
 <li>该函数只能修改 <code>CVariant</code> 类型对象的数据值，不能修改数据类型。</li>
 </ul>
 </div>
-<h3 id="_varuintmodifydata"><code>_varUIntModifyData()</code><a class="headerlink" href="#_varuintmodifydata" title="Permanent link">&para;</a></h3>
-<h4 id="_109">函数原型<a class="headerlink" href="#_109" title="Permanent link">&para;</a></h4>
+<h3 id="varuintmodifydata"><code>varUIntModifyData()</code><a class="headerlink" href="#varuintmodifydata" title="Permanent link">&para;</a></h3>
+<h4 id="_110">宏函数<a class="headerlink" href="#_110" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="cp">#define varUIntModifyData(variant, new_value) _varUIntModifyValue(&amp;variant, new_value)</span>
+</code></pre></div>
+<h4 id="_111">函数原型<a class="headerlink" href="#_111" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">_varUIntModifyValue</span><span class="p">(</span><span class="n">CVariant</span><span class="o">*</span><span class="w"> </span><span class="n">variant</span><span class="p">,</span><span class="w"> </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">new_value</span><span class="p">);</span>
 </code></pre></div>
-<h4 id="_110">参数<a class="headerlink" href="#_110" title="Permanent link">&para;</a></h4>
+<h4 id="_112">参数<a class="headerlink" href="#_112" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>variant</code>: <code>CVariant</code> 类型对象。</li>
 <li><code>new_value</code>: 新的无符号整数值。</li>
 </ul>
-<h4 id="_111">功能<a class="headerlink" href="#_111" title="Permanent link">&para;</a></h4>
+<h4 id="_113">功能<a class="headerlink" href="#_113" title="Permanent link">&para;</a></h4>
 <ul>
 <li>该函数用于修改 <code>CVariant</code> 类型对象的数据值为新的无符号整数值。</li>
 </ul>
-<h4 id="_112">示例<a class="headerlink" href="#_112" title="Permanent link">&para;</a></h4>
+<h4 id="_114">示例<a class="headerlink" href="#_114" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="n">CVariant</span><span class="w"> </span><span class="n">variant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">varUInt</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
 <span class="n">_varUIntModifyValue</span><span class="p">(</span><span class="o">&amp;</span><span class="n">variant</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span>
 </code></pre></div>
@@ -2393,46 +2525,34 @@
 </ul>
 </div>
 <h3 id="varboolmodifydata"><code>varBoolModifyData()</code><a class="headerlink" href="#varboolmodifydata" title="Permanent link">&para;</a></h3>
-<h4 id="_113">宏函数<a class="headerlink" href="#_113" title="Permanent link">&para;</a></h4>
+<h4 id="_115">宏函数<a class="headerlink" href="#_115" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="cp">#define varBoolModifyData(variant, new_value) _varIntModifyValue(&amp;variant, new_value)</span>
 </code></pre></div>
-<h4 id="_114">函数原型<a class="headerlink" href="#_114" title="Permanent link">&para;</a></h4>
-<p>见 <a href="#_varintmodifydata"><code>_varIntModifyData()</code></a> 函数。</p>
-<h3 id="varintmodifydata"><code>varIntModifyData()</code><a class="headerlink" href="#varintmodifydata" title="Permanent link">&para;</a></h3>
-<h4 id="_115">宏函数<a class="headerlink" href="#_115" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="cp">#define varIntModifyData(variant, new_value) _varIntModifyValue(&amp;variant, new_value)</span>
-</code></pre></div>
 <h4 id="_116">函数原型<a class="headerlink" href="#_116" title="Permanent link">&para;</a></h4>
-<p>见 <a href="#_varintmodifydata"><code>_varIntModifyData()</code></a> 函数。</p>
-<h3 id="varuintmodifydata"><code>varUIntModifyData()</code><a class="headerlink" href="#varuintmodifydata" title="Permanent link">&para;</a></h3>
-<h4 id="_117">宏函数<a class="headerlink" href="#_117" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="cp">#define varUIntModifyData(variant, new_value) _varUIntModifyValue(&amp;variant, new_value)</span>
-</code></pre></div>
-<h4 id="_118">函数原型<a class="headerlink" href="#_118" title="Permanent link">&para;</a></h4>
-<p>见 <a href="#_varuintmodifydata"><code>_varUIntModifyData()</code></a> 函数。</p>
-<h2 id="_119">销毁函数<a class="headerlink" href="#_119" title="Permanent link">&para;</a></h2>
+<p>见 <a href="#varintmodifydata"><code>varIntModifyData()</code></a> 函数。</p>
+<h2 id="_117">销毁函数<a class="headerlink" href="#_117" title="Permanent link">&para;</a></h2>
 <p>针对包含指针的变量，CVariant 提供了销毁指针的函数：<code>_varDestroyPointer()</code>, <code>_varDestroyString()</code>,<code>_varDestroyStruct()</code>, <code>_varDestroyEnum()</code>, <code>_varDestroyCustom()</code> 等。</p>
 <p>这里非常推荐使用 <code>varDestroy()</code> 函数以销毁 CVariant 类型对象。</p>
 <h3 id="vardestroy"><code>varDestroy()</code><a class="headerlink" href="#vardestroy" title="Permanent link">&para;</a></h3>
-<h4 id="_120">宏函数<a class="headerlink" href="#_120" title="Permanent link">&para;</a></h4>
+<h4 id="_118">宏函数<a class="headerlink" href="#_118" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="cp">#define varDestroy(variant)     _varDestroy(&amp;variant)</span>
 </code></pre></div>
-<h4 id="_121">函数原型<a class="headerlink" href="#_121" title="Permanent link">&para;</a></h4>
+<h4 id="_119">函数原型<a class="headerlink" href="#_119" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">_varDestroy</span><span class="p">(</span><span class="n">CVariant</span><span class="o">*</span><span class="w"> </span><span class="n">variant</span><span class="p">);</span>
 </code></pre></div>
-<h4 id="_122">参数<a class="headerlink" href="#_122" title="Permanent link">&para;</a></h4>
+<h4 id="_120">参数<a class="headerlink" href="#_120" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>variant</code>: 待销毁的 CVariant 类型对象。</li>
 </ul>
-<h4 id="_123">功能<a class="headerlink" href="#_123" title="Permanent link">&para;</a></h4>
+<h4 id="_121">功能<a class="headerlink" href="#_121" title="Permanent link">&para;</a></h4>
 <p>销毁指定的 CVariant 类型对象。若指定的 CVariant 类型对象所对应的数据类型为如下类型，则销毁该指针所对应的数据。</p>
 <ul>
-<li><code>TYPE_STRING</code></li>
-<li><code>TYPE_POINTER</code></li>
-<li><code>TYPE_ENUM</code></li>
-<li><code>TYPE_CUSTOM</code></li>
+<li><a href="#_3"><code>TYPE_STRING</code></a></li>
+<li><a href="#_3"><code>TYPE_POINTER</code></a></li>
+<li><a href="#_3"><code>TYPE_ENUM</code></a></li>
+<li><a href="#_3"><code>TYPE_CUSTOM</code></a></li>
 </ul>
-<h3 id="_124">示例<a class="headerlink" href="#_124" title="Permanent link">&para;</a></h3>
+<h3 id="_122">示例<a class="headerlink" href="#_122" title="Permanent link">&para;</a></h3>
 <p>定义一个整数指针并释放。</p>
 <div class="highlight"><pre><span></span><code><span class="n">CVariant</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">varPointer</span><span class="p">(</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)));</span>
 <span class="n">varDestroy</span><span class="p">(</span><span class="n">var</span><span class="p">);</span>
@@ -2443,176 +2563,176 @@
 <li>该函数只能销毁 <code>CVariant</code> 类型对象包含的<strong>指针类型数据</strong>，不能销毁数据类型本身。</li>
 </ul>
 </div>
-<h2 id="_125">变体值访问函数<a class="headerlink" href="#_125" title="Permanent link">&para;</a></h2>
+<h2 id="_123">变体值访问函数<a class="headerlink" href="#_123" title="Permanent link">&para;</a></h2>
 <p>CVariant 类型对象提供了以下函数用于访问（获取）对应数据类型的数据值。具体需要根据不同数据类型的变量调用对应的访问函数。</p>
 <h3 id="varbooldata"><code>varBoolData()</code><a class="headerlink" href="#varbooldata" title="Permanent link">&para;</a></h3>
-<h4 id="_126">宏函数<a class="headerlink" href="#_126" title="Permanent link">&para;</a></h4>
+<h4 id="_124">宏函数<a class="headerlink" href="#_124" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="cp">#define varBoolData(variant)       _varBoolValue(&amp;variant)</span>
 </code></pre></div>
-<h4 id="_127">函数原型<a class="headerlink" href="#_127" title="Permanent link">&para;</a></h4>
+<h4 id="_125">函数原型<a class="headerlink" href="#_125" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="nf">_varBoolValue</span><span class="p">(</span><span class="n">CVariant</span><span class="o">*</span><span class="w"> </span><span class="n">variant</span><span class="p">);</span>
 </code></pre></div>
-<h4 id="_128">参数<a class="headerlink" href="#_128" title="Permanent link">&para;</a></h4>
+<h4 id="_126">参数<a class="headerlink" href="#_126" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>variant</code>: CVariant 类型对象</li>
 </ul>
-<h4 id="_129">返回值<a class="headerlink" href="#_129" title="Permanent link">&para;</a></h4>
+<h4 id="_127">返回值<a class="headerlink" href="#_127" title="Permanent link">&para;</a></h4>
 <p>返回 CVariant 类型对象对应的 bool 值。</p>
 <h3 id="varchardata"><code>varCharData()</code><a class="headerlink" href="#varchardata" title="Permanent link">&para;</a></h3>
-<h4 id="_130">宏函数<a class="headerlink" href="#_130" title="Permanent link">&para;</a></h4>
+<h4 id="_128">宏函数<a class="headerlink" href="#_128" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="cp">#define varCharData(variant)       _varInt8Value(&amp;variant)</span>
 </code></pre></div>
-<h4 id="_131">函数原型<a class="headerlink" href="#_131" title="Permanent link">&para;</a></h4>
+<h4 id="_129">函数原型<a class="headerlink" href="#_129" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kt">int8_t</span><span class="w"> </span><span class="nf">_varInt8Value</span><span class="p">(</span><span class="n">CVariant</span><span class="o">*</span><span class="w"> </span><span class="n">variant</span><span class="p">);</span>
 </code></pre></div>
-<h4 id="_132">参数<a class="headerlink" href="#_132" title="Permanent link">&para;</a></h4>
+<h4 id="_130">参数<a class="headerlink" href="#_130" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>variant</code>: CVariant 类型对象</li>
 </ul>
-<h4 id="_133">返回值<a class="headerlink" href="#_133" title="Permanent link">&para;</a></h4>
+<h4 id="_131">返回值<a class="headerlink" href="#_131" title="Permanent link">&para;</a></h4>
 <p>返回 CVariant 类型对象对应的 <code>int8_t</code> / <code>char</code> 值。</p>
 <h3 id="varuchardata"><code>varUCharData()</code><a class="headerlink" href="#varuchardata" title="Permanent link">&para;</a></h3>
-<h4 id="_134">宏函数<a class="headerlink" href="#_134" title="Permanent link">&para;</a></h4>
+<h4 id="_132">宏函数<a class="headerlink" href="#_132" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="cp">#define varUCharData(variant)      _varUInt8Value(&amp;variant)</span>
 </code></pre></div>
-<h4 id="_135">函数原型<a class="headerlink" href="#_135" title="Permanent link">&para;</a></h4>
+<h4 id="_133">函数原型<a class="headerlink" href="#_133" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">_varUInt8Value</span><span class="p">(</span><span class="n">CVariant</span><span class="o">*</span><span class="w"> </span><span class="n">variant</span><span class="p">);</span>
 </code></pre></div>
-<h4 id="_136">参数<a class="headerlink" href="#_136" title="Permanent link">&para;</a></h4>
+<h4 id="_134">参数<a class="headerlink" href="#_134" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>variant</code>: CVariant 类型对象</li>
 </ul>
-<h4 id="_137">返回值<a class="headerlink" href="#_137" title="Permanent link">&para;</a></h4>
+<h4 id="_135">返回值<a class="headerlink" href="#_135" title="Permanent link">&para;</a></h4>
 <p>返回 CVariant 类型对象对应的 <code>uint8_t</code> / <code>unsigned char</code> 值。</p>
 <h3 id="varshortdata"><code>varShortData()</code><a class="headerlink" href="#varshortdata" title="Permanent link">&para;</a></h3>
-<h4 id="_138">宏函数<a class="headerlink" href="#_138" title="Permanent link">&para;</a></h4>
+<h4 id="_136">宏函数<a class="headerlink" href="#_136" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="cp">#define varShortData(variant)      _varInt16Value(&amp;variant)</span>
 </code></pre></div>
-<h4 id="_139">函数原型<a class="headerlink" href="#_139" title="Permanent link">&para;</a></h4>
+<h4 id="_137">函数原型<a class="headerlink" href="#_137" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kt">int16_t</span><span class="w"> </span><span class="nf">_varInt16Value</span><span class="p">(</span><span class="n">CVariant</span><span class="o">*</span><span class="w"> </span><span class="n">variant</span><span class="p">);</span>
 </code></pre></div>
-<h4 id="_140">参数<a class="headerlink" href="#_140" title="Permanent link">&para;</a></h4>
+<h4 id="_138">参数<a class="headerlink" href="#_138" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>variant</code>: CVariant 类型对象</li>
 </ul>
-<h4 id="_141">返回值<a class="headerlink" href="#_141" title="Permanent link">&para;</a></h4>
+<h4 id="_139">返回值<a class="headerlink" href="#_139" title="Permanent link">&para;</a></h4>
 <p>返回 CVariant 类型对象对应的 <code>int16_t</code> / <code>short</code> 值。</p>
 <h3 id="varushortdata"><code>varUShortData()</code><a class="headerlink" href="#varushortdata" title="Permanent link">&para;</a></h3>
-<h4 id="_142">宏函数<a class="headerlink" href="#_142" title="Permanent link">&para;</a></h4>
+<h4 id="_140">宏函数<a class="headerlink" href="#_140" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="cp">#define varUShortData(variant)     _varUInt16Value(&amp;variant)</span>
 </code></pre></div>
-<h4 id="_143">函数原型<a class="headerlink" href="#_143" title="Permanent link">&para;</a></h4>
+<h4 id="_141">函数原型<a class="headerlink" href="#_141" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kt">uint16_t</span><span class="w"> </span><span class="nf">_varUInt16Value</span><span class="p">(</span><span class="n">CVariant</span><span class="o">*</span><span class="w"> </span><span class="n">variant</span><span class="p">);</span>
 </code></pre></div>
-<h4 id="_144">参数<a class="headerlink" href="#_144" title="Permanent link">&para;</a></h4>
+<h4 id="_142">参数<a class="headerlink" href="#_142" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>variant</code>: CVariant 类型对象</li>
 </ul>
-<h4 id="_145">返回值<a class="headerlink" href="#_145" title="Permanent link">&para;</a></h4>
+<h4 id="_143">返回值<a class="headerlink" href="#_143" title="Permanent link">&para;</a></h4>
 <p>返回 CVariant 类型对象对应的 <code>uint16_t</code> / <code>unsigned short</code> 值。</p>
 <h3 id="varintdata"><code>varIntData()</code><a class="headerlink" href="#varintdata" title="Permanent link">&para;</a></h3>
-<h4 id="_146">宏函数<a class="headerlink" href="#_146" title="Permanent link">&para;</a></h4>
+<h4 id="_144">宏函数<a class="headerlink" href="#_144" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="cp">#define varIntData(variant)        _varInt32Value(&amp;variant)</span>
 </code></pre></div>
-<h4 id="_147">函数原型<a class="headerlink" href="#_147" title="Permanent link">&para;</a></h4>
+<h4 id="_145">函数原型<a class="headerlink" href="#_145" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kt">int32_t</span><span class="w"> </span><span class="nf">_varInt32Value</span><span class="p">(</span><span class="n">CVariant</span><span class="o">*</span><span class="w"> </span><span class="n">variant</span><span class="p">);</span>
 </code></pre></div>
-<h4 id="_148">参数<a class="headerlink" href="#_148" title="Permanent link">&para;</a></h4>
+<h4 id="_146">参数<a class="headerlink" href="#_146" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>variant</code>: CVariant 类型对象</li>
 </ul>
-<h4 id="_149">返回值<a class="headerlink" href="#_149" title="Permanent link">&para;</a></h4>
+<h4 id="_147">返回值<a class="headerlink" href="#_147" title="Permanent link">&para;</a></h4>
 <p>返回 CVariant 类型对象对应的 <code>int32_t</code> / <code>int</code> 值。</p>
 <h3 id="varuintdata"><code>varUIntData()</code><a class="headerlink" href="#varuintdata" title="Permanent link">&para;</a></h3>
-<h4 id="_150">宏函数<a class="headerlink" href="#_150" title="Permanent link">&para;</a></h4>
+<h4 id="_148">宏函数<a class="headerlink" href="#_148" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="cp">#define varUIntData(variant)       _varUInt32Value(&amp;variant)</span>
 </code></pre></div>
-<h4 id="_151">函数原型<a class="headerlink" href="#_151" title="Permanent link">&para;</a></h4>
+<h4 id="_149">函数原型<a class="headerlink" href="#_149" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kt">uint32_t</span><span class="w"> </span><span class="nf">_varUInt32Value</span><span class="p">(</span><span class="n">CVariant</span><span class="o">*</span><span class="w"> </span><span class="n">variant</span><span class="p">);</span>
 </code></pre></div>
-<h4 id="_152">参数<a class="headerlink" href="#_152" title="Permanent link">&para;</a></h4>
+<h4 id="_150">参数<a class="headerlink" href="#_150" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>variant</code>: CVariant 类型对象</li>
 </ul>
-<h4 id="_153">返回值<a class="headerlink" href="#_153" title="Permanent link">&para;</a></h4>
+<h4 id="_151">返回值<a class="headerlink" href="#_151" title="Permanent link">&para;</a></h4>
 <p>返回 CVariant 类型对象对应的 <code>uint32_t</code> / <code>unsigned int</code> 值。</p>
 <h3 id="varlonglongdata"><code>varLongLongData()</code><a class="headerlink" href="#varlonglongdata" title="Permanent link">&para;</a></h3>
-<h4 id="_154">宏函数<a class="headerlink" href="#_154" title="Permanent link">&para;</a></h4>
+<h4 id="_152">宏函数<a class="headerlink" href="#_152" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="cp">#define varLongLongData(variant)       _varInt64Value(&amp;variant)</span>
 </code></pre></div>
-<h4 id="_155">函数原型<a class="headerlink" href="#_155" title="Permanent link">&para;</a></h4>
+<h4 id="_153">函数原型<a class="headerlink" href="#_153" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kt">int64_t</span><span class="w"> </span><span class="nf">_varInt64Value</span><span class="p">(</span><span class="n">CVariant</span><span class="o">*</span><span class="w"> </span><span class="n">variant</span><span class="p">);</span>
 </code></pre></div>
-<h4 id="_156">参数<a class="headerlink" href="#_156" title="Permanent link">&para;</a></h4>
+<h4 id="_154">参数<a class="headerlink" href="#_154" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>variant</code>: CVariant 类型对象</li>
 </ul>
-<h4 id="_157">返回值<a class="headerlink" href="#_157" title="Permanent link">&para;</a></h4>
+<h4 id="_155">返回值<a class="headerlink" href="#_155" title="Permanent link">&para;</a></h4>
 <p>返回 CVariant 类型对象对应的 <code>int64_t</code> / <code>long long</code> 值。</p>
 <h3 id="varulonglongdata"><code>varULongLongData()</code><a class="headerlink" href="#varulonglongdata" title="Permanent link">&para;</a></h3>
-<h4 id="_158">宏函数<a class="headerlink" href="#_158" title="Permanent link">&para;</a></h4>
+<h4 id="_156">宏函数<a class="headerlink" href="#_156" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="cp">#define varULongLongData(variant)      _varUInt64Value(&amp;variant)</span>
 </code></pre></div>
-<h4 id="_159">函数原型<a class="headerlink" href="#_159" title="Permanent link">&para;</a></h4>
+<h4 id="_157">函数原型<a class="headerlink" href="#_157" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kt">uint64_t</span><span class="w"> </span><span class="nf">_varUInt64Value</span><span class="p">(</span><span class="n">CVariant</span><span class="o">*</span><span class="w"> </span><span class="n">variant</span><span class="p">);</span>
 </code></pre></div>
-<h4 id="_160">参数<a class="headerlink" href="#_160" title="Permanent link">&para;</a></h4>
+<h4 id="_158">参数<a class="headerlink" href="#_158" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>variant</code>: CVariant 类型对象</li>
 </ul>
-<h4 id="_161">返回值<a class="headerlink" href="#_161" title="Permanent link">&para;</a></h4>
+<h4 id="_159">返回值<a class="headerlink" href="#_159" title="Permanent link">&para;</a></h4>
 <p>返回 CVariant 类型对象对应的 <code>uint64_t</code> / <code>unsigned long long</code> 值。</p>
 <h3 id="varfloatdata"><code>varFloatData()</code><a class="headerlink" href="#varfloatdata" title="Permanent link">&para;</a></h3>
-<h4 id="_162">宏函数<a class="headerlink" href="#_162" title="Permanent link">&para;</a></h4>
+<h4 id="_160">宏函数<a class="headerlink" href="#_160" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="cp">#define varFloatData(variant)          _varFloatValue(&amp;variant)</span>
 </code></pre></div>
-<h4 id="_163">函数原型<a class="headerlink" href="#_163" title="Permanent link">&para;</a></h4>
+<h4 id="_161">函数原型<a class="headerlink" href="#_161" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="nf">_varFloatValue</span><span class="p">(</span><span class="n">CVariant</span><span class="o">*</span><span class="w"> </span><span class="n">variant</span><span class="p">);</span>
 </code></pre></div>
-<h4 id="_164">参数<a class="headerlink" href="#_164" title="Permanent link">&para;</a></h4>
+<h4 id="_162">参数<a class="headerlink" href="#_162" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>variant</code>: CVariant 类型对象</li>
 </ul>
-<h4 id="_165">返回值<a class="headerlink" href="#_165" title="Permanent link">&para;</a></h4>
+<h4 id="_163">返回值<a class="headerlink" href="#_163" title="Permanent link">&para;</a></h4>
 <p>返回 CVariant 类型对象对应的 <code>float</code> 值。</p>
 <h3 id="vardoubledata"><code>varDoubleData()</code><a class="headerlink" href="#vardoubledata" title="Permanent link">&para;</a></h3>
-<h4 id="_166">宏函数<a class="headerlink" href="#_166" title="Permanent link">&para;</a></h4>
+<h4 id="_164">宏函数<a class="headerlink" href="#_164" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="cp">#define varDoubleData(variant)         _varDoubleValue(&amp;variant)</span>
 </code></pre></div>
-<h4 id="_167">函数原型<a class="headerlink" href="#_167" title="Permanent link">&para;</a></h4>
+<h4 id="_165">函数原型<a class="headerlink" href="#_165" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kt">double</span><span class="w"> </span><span class="nf">_varDoubleValue</span><span class="p">(</span><span class="n">CVariant</span><span class="o">*</span><span class="w"> </span><span class="n">variant</span><span class="p">);</span>
 </code></pre></div>
-<h4 id="_168">参数<a class="headerlink" href="#_168" title="Permanent link">&para;</a></h4>
+<h4 id="_166">参数<a class="headerlink" href="#_166" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>variant</code>: CVariant 类型对象</li>
 </ul>
-<h4 id="_169">返回值<a class="headerlink" href="#_169" title="Permanent link">&para;</a></h4>
+<h4 id="_167">返回值<a class="headerlink" href="#_167" title="Permanent link">&para;</a></h4>
 <p>返回 CVariant 类型对象对应的 <code>double</code> 值。</p>
 <h3 id="varlongdoubledata"><code>varLongDoubleData()</code><a class="headerlink" href="#varlongdoubledata" title="Permanent link">&para;</a></h3>
-<h4 id="_170">宏函数<a class="headerlink" href="#_170" title="Permanent link">&para;</a></h4>
+<h4 id="_168">宏函数<a class="headerlink" href="#_168" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="cp">#define varLongDoubleData(variant)      _varLongDoubleValue(&amp;variant)</span>
 </code></pre></div>
-<h4 id="_171">函数原型<a class="headerlink" href="#_171" title="Permanent link">&para;</a></h4>
+<h4 id="_169">函数原型<a class="headerlink" href="#_169" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kt">long</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">_varLongDoubleValue</span><span class="p">(</span><span class="n">CVariant</span><span class="o">*</span><span class="w"> </span><span class="n">variant</span><span class="p">);</span>
 </code></pre></div>
-<h4 id="_172">参数<a class="headerlink" href="#_172" title="Permanent link">&para;</a></h4>
+<h4 id="_170">参数<a class="headerlink" href="#_170" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>variant</code>: CVariant 类型对象</li>
 </ul>
-<h4 id="_173">返回值<a class="headerlink" href="#_173" title="Permanent link">&para;</a></h4>
+<h4 id="_171">返回值<a class="headerlink" href="#_171" title="Permanent link">&para;</a></h4>
 <p>返回 CVariant 类型对象对应的 <code>long double</code> 值。</p>
 <h3 id="varstringdata"><code>varStringData()</code><a class="headerlink" href="#varstringdata" title="Permanent link">&para;</a></h3>
-<h4 id="_174">宏函数<a class="headerlink" href="#_174" title="Permanent link">&para;</a></h4>
+<h4 id="_172">宏函数<a class="headerlink" href="#_172" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="cp">#define varStringData(variant)         _varStringValue(&amp;variant)</span>
 </code></pre></div>
-<h4 id="_175">函数原型<a class="headerlink" href="#_175" title="Permanent link">&para;</a></h4>
+<h4 id="_173">函数原型<a class="headerlink" href="#_173" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="n">CString</span><span class="w"> </span><span class="nf">_varStringValue</span><span class="p">(</span><span class="n">CVariant</span><span class="o">*</span><span class="w"> </span><span class="n">variant</span><span class="p">);</span>
 </code></pre></div>
-<h4 id="_176">参数<a class="headerlink" href="#_176" title="Permanent link">&para;</a></h4>
+<h4 id="_174">参数<a class="headerlink" href="#_174" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>variant</code>: CVariant 类型对象</li>
 </ul>
-<h4 id="_177">返回值<a class="headerlink" href="#_177" title="Permanent link">&para;</a></h4>
+<h4 id="_175">返回值<a class="headerlink" href="#_175" title="Permanent link">&para;</a></h4>
 <p>返回 CVariant 类型对象对应的字符串。</p>
 <div class="admonition warning">
 <p class="admonition-title">特别注意</p>
@@ -2624,70 +2744,70 @@
 <p>此函数可以用于获取具有指针的 CVariant 类型对象所对应的数据。
 简而言之，<strong>只要该 CVariant 类型对象对应的数据类型为指针，则此函数返回该指针所对应的数据。</strong></p>
 </div>
-<h4 id="_178">宏函数<a class="headerlink" href="#_178" title="Permanent link">&para;</a></h4>
+<h4 id="_176">宏函数<a class="headerlink" href="#_176" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="cp">#define varPointerData(variant, ptr_type)    (ptr_type *)_varPtr(&amp;variant)</span>
 </code></pre></div>
 <ul>
 <li><code>variant</code>: CVariant 类型对象</li>
 <li><code>ptr_type</code>: 指针类型</li>
 </ul>
-<h4 id="_179">函数原型<a class="headerlink" href="#_179" title="Permanent link">&para;</a></h4>
+<h4 id="_177">函数原型<a class="headerlink" href="#_177" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="nf">_varPtr</span><span class="p">(</span><span class="n">CVariant</span><span class="o">*</span><span class="w"> </span><span class="n">variant</span><span class="p">);</span>
 </code></pre></div>
-<h4 id="_180">参数<a class="headerlink" href="#_180" title="Permanent link">&para;</a></h4>
+<h4 id="_178">参数<a class="headerlink" href="#_178" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>variant</code>: CVariant 类型对象</li>
 </ul>
-<h4 id="_181">返回值<a class="headerlink" href="#_181" title="Permanent link">&para;</a></h4>
+<h4 id="_179">返回值<a class="headerlink" href="#_179" title="Permanent link">&para;</a></h4>
 <p>返回 CVariant 类型对象对应的指针。若 CVariant 类型对象为空，则返回 <code>NULL</code>。</p>
 <div class="admonition warning">
 <p class="admonition-title">特别注意</p>
 <p>此函数返回的值为 <code>void *</code> 类型，<strong>若需要获取自己定义的指针类型，建议使用宏函数</strong>。</p>
 </div>
 <h3 id="varstructptr"><code>varStructPtr()</code><a class="headerlink" href="#varstructptr" title="Permanent link">&para;</a></h3>
-<h4 id="_182">宏函数<a class="headerlink" href="#_182" title="Permanent link">&para;</a></h4>
+<h4 id="_180">宏函数<a class="headerlink" href="#_180" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="cp">#define varStructPtr(variant, struct_type)   (struct_type *)_varStructPtr(&amp;variant)</span>
 </code></pre></div>
 <ul>
 <li><code>variant</code>: CVariant 类型对象。</li>
 <li><code>struct_type</code>: 结构体类型。</li>
 </ul>
-<h4 id="_183">函数原型<a class="headerlink" href="#_183" title="Permanent link">&para;</a></h4>
+<h4 id="_181">函数原型<a class="headerlink" href="#_181" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="nf">_varStructPtr</span><span class="p">(</span><span class="n">CVariant</span><span class="o">*</span><span class="w"> </span><span class="n">variant</span><span class="p">);</span>
 </code></pre></div>
 <ul>
 <li><code>variant</code>: CVariant 类型对象。</li>
 </ul>
-<h4 id="_184">返回值<a class="headerlink" href="#_184" title="Permanent link">&para;</a></h4>
+<h4 id="_182">返回值<a class="headerlink" href="#_182" title="Permanent link">&para;</a></h4>
 <p>返回 CVariant 类型对象对应的<strong>结构体指针</strong>。若 CVariant 类型对象为空，则返回 <code>NULL</code>。</p>
 <h3 id="varstructdata"><code>varStructData()</code><a class="headerlink" href="#varstructdata" title="Permanent link">&para;</a></h3>
-<h4 id="_185">宏函数<a class="headerlink" href="#_185" title="Permanent link">&para;</a></h4>
+<h4 id="_183">宏函数<a class="headerlink" href="#_183" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="cp">#define varStructData(variant, struct_type)  *(varStructPtr(variant, struct_type))</span>
 </code></pre></div>
 <ul>
 <li><code>variant</code>: CVariant 类型对象。</li>
 <li><code>struct_type</code>: 结构体类型。</li>
 </ul>
-<h4 id="_186">函数原型<a class="headerlink" href="#_186" title="Permanent link">&para;</a></h4>
+<h4 id="_184">函数原型<a class="headerlink" href="#_184" title="Permanent link">&para;</a></h4>
 <p>见 <a href="#varstructptr"><code>varStructPtr()</code></a>。</p>
-<h4 id="_187">返回值<a class="headerlink" href="#_187" title="Permanent link">&para;</a></h4>
+<h4 id="_185">返回值<a class="headerlink" href="#_185" title="Permanent link">&para;</a></h4>
 <p>返回 CVariant 类型对象对应的<strong>结构体数据</strong>。若 CVariant 类型对象为空，则返回 <code>NULL</code>。</p>
-<h2 id="_188">其它函数<a class="headerlink" href="#_188" title="Permanent link">&para;</a></h2>
+<h2 id="_186">其它函数<a class="headerlink" href="#_186" title="Permanent link">&para;</a></h2>
 <h3 id="printvardata"><code>printVarData()</code><a class="headerlink" href="#printvardata" title="Permanent link">&para;</a></h3>
-<h4 id="_189">宏函数<a class="headerlink" href="#_189" title="Permanent link">&para;</a></h4>
+<h4 id="_187">宏函数<a class="headerlink" href="#_187" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="cp">#define printVarData(variant)      _printVarData(&amp;variant)</span>
 </code></pre></div>
-<h4 id="_190">函数原型<a class="headerlink" href="#_190" title="Permanent link">&para;</a></h4>
+<h4 id="_188">函数原型<a class="headerlink" href="#_188" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">printVarData</span><span class="p">(</span><span class="n">CVariant</span><span class="w"> </span><span class="o">*</span><span class="n">variant</span><span class="p">);</span>
 </code></pre></div>
-<h4 id="_191">参数<a class="headerlink" href="#_191" title="Permanent link">&para;</a></h4>
+<h4 id="_189">参数<a class="headerlink" href="#_189" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>variant</code>：CVariant 类型对象。</li>
 </ul>
-<h4 id="_192">功能<a class="headerlink" href="#_192" title="Permanent link">&para;</a></h4>
+<h4 id="_190">功能<a class="headerlink" href="#_190" title="Permanent link">&para;</a></h4>
 <p>在控制台（终端）中输出 CVariant 类型对象对应的数据。</p>
-<h4 id="_193">示例<a class="headerlink" href="#_193" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="n">CVariant</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">varInt32</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<h4 id="_191">示例<a class="headerlink" href="#_191" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">CVariant</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">varInt</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
 <span class="n">printVarData</span><span class="p">(</span><span class="n">var</span><span class="p">);</span>
 </code></pre></div>
 <p>在控制台（终端）下你可能会看到如下输出：</p>
@@ -2704,6 +2824,8 @@
     
   
   
+    
+  
 
 
   <aside class="md-source-file">
@@ -2713,10 +2835,19 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2025年7月16日 16:14:59 UTC">2025年7月16日 16:14:59</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025年7月25日 00:10:30 CST"><span class="timeago" datetime="2025-07-25T00:10:30+08:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年7月25日 00:10:30 CST">2025-07-25</span>
   </span>
 
     
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="创建日期">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025年7月15日 17:49:58 CST"><span class="timeago" datetime="2025-07-15T17:49:58+08:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年7月15日 17:49:58 CST">2025-07-15</span>
+  </span>
+
     
     
     
@@ -2785,6 +2916,14 @@
     
     
       <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../../js/timeago.min.js"></script>
+      
+        <script src="../../../js/timeago_mkdocs_material.js"></script>
+      
+        <script src="../../../js/timeago.min.js"></script>
+      
+        <script src="../../../js/timeago_mkdocs_material.js"></script>
       
     
   </body>

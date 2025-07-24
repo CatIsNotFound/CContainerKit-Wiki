@@ -48,6 +48,8 @@
       
     
     
+      <link rel="stylesheet" href="../css/timeago.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -463,6 +465,46 @@
   
   
   
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Containers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Containers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../apis/CArray/" class="md-nav__link">
         
@@ -533,6 +575,123 @@
   
   
     <li class="md-nav__item">
+      <a href="../apis/CStack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CStack
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apis/CQueue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CQueue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apis/CLinkedList/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CLinkedList
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Common/Misc
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Common/Misc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../apis/CVariant/" class="md-nav__link">
         
   
@@ -567,6 +726,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -729,9 +896,53 @@
 </code></pre></div>
 <p>After cloning is complete, use the <code>ls</code> command and you should be able to find a directory named <code>CContainerKit</code>.</p>
 <h3 id="step-2-compile-and-install">Step 2: Compile and Install<a class="headerlink" href="#step-2-compile-and-install" title="Permanent link">&para;</a></h3>
-<p>In this step, you need to use <a href="https://cmake.org/download/">CMake</a> for different operations depending on your operating system and compiler.</p>
+<p>In this step, you need to use <a href="https://cmake.org/download/"><abbr title="A cross-platform build system used to load, configure, build, test, and install software.">CMake</abbr></a> for different operations depending on your operating system and compiler.</p>
+<h4 id="clang-macoslinux">Clang (MacOS/Linux)<a class="headerlink" href="#clang-macoslinux" title="Permanent link">&para;</a></h4>
+<p>On MacOS/Linux, compile the project using <a href="https://clang.llvm.org/">Clang</a>.</p>
+<details class="tip">
+<summary>How to install Clang?</summary>
+<p><strong>MacOS:</strong></p>
+<p><strong>Option 1: Install Xcode Command Line Tools [Recommended]</strong></p>
+<p>Execute the following command, which will display a graphical window. Follow the prompts to install:</p>
+<div class="highlight"><pre><span></span><code>xcode-select<span class="w"> </span>--install
+</code></pre></div>
+<p><strong>Option 2: Install via package manager</strong></p>
+<p>You can install Clang via <a href="https://brew.sh/">Homebrew</a>.</p>
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>clang
+</code></pre></div>
+<p><strong>Linux:</strong></p>
+<p>You can install Clang via your package manager (typically using <code>apt</code> or <code>dnf</code>).</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>clang<span class="w"> </span>lldb<span class="w"> </span>lld<span class="w"> </span>make<span class="w">                            </span>//<span class="w"> </span>Debian/Ubuntu
+sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>clang<span class="w"> </span>clang-devel<span class="w"> </span>lldb<span class="w"> </span>lld<span class="w">                     </span>//<span class="w"> </span>Fedora/CentOS/RHEL
+sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>clang<span class="w"> </span>clang-tools-extra<span class="w">                          </span>//<span class="w"> </span>Arch<span class="w"> </span>Linux/Manjaro
+</code></pre></div>
+</details>
+<p>Enter the <code>CContainerKit</code> directory and execute the following commands to compile the project:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>CContainerKit
+mkdir<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
+cmake<span class="w"> </span>..<span class="w"> </span>-G<span class="w"> </span><span class="s2">&quot;UNIX Makefiles&quot;</span><span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Release<span class="w"> </span>-DCMAKE_INSTALL_PREFIX<span class="o">=</span>&lt;INSTALL_DIR&gt;
+make<span class="w"> </span>install
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please replace <code>&lt;INSTALL_DIR&gt;</code> with your desired installation directory path. When you execute the cmake configuration command, you can see the output installation path in the terminal. You will usually find a line like this:</p>
+<div class="highlight"><pre><span></span><code>-- CMAKE_INSTALL_PREFIX: &lt;INSTALL_DIR&gt;
+</code></pre></div>
+</div>
 <h4 id="ninja-linux">Ninja (Linux)<a class="headerlink" href="#ninja-linux" title="Permanent link">&para;</a></h4>
 <p>It is highly recommended to use <a href="https://ninja-build.org/">Ninja</a> for compilation in a Linux environment. <em>(Note: Ninja needs to be installed via package manager or downloaded from <a href="https://github.com/ninja-build/ninja/releases">Github</a>)</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When compiling the project using ninja, make sure a compiler is already installed on your system. See the <a href="#gcc-linux">GCC (Linux)</a> section below for details.</p>
+</div>
+<details class="tip">
+<summary>How to install ninja</summary>
+<p>On different Linux distributions, you may need to use different package managers to install Ninja.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ninja-build<span class="w"> </span>-y<span class="w">     </span>//<span class="w"> </span>Debian/Ubuntu
+sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>ninja-build<span class="w"> </span>-y<span class="w">     </span>//<span class="w"> </span>Fedora/CentOS/RHEL
+sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>ninja<span class="w">                </span>//<span class="w"> </span>Arch<span class="w"> </span>Linux/Manjaro
+</code></pre></div>
+</details>
 <p>Enter the <code>CContainerKit</code> directory and execute the following commands to compile the project:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>CContainerKit
 mkdir<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
@@ -745,6 +956,15 @@ ninja<span class="w"> </span>install
 </code></pre></div>
 </div>
 <h4 id="gcc-linux">GCC (Linux)<a class="headerlink" href="#gcc-linux" title="Permanent link">&para;</a></h4>
+<p>On Linux systems, compile the project using <a href="https://gcc.gnu.org/">GCC</a>.</p>
+<details class="tip">
+<summary>How to install GCC?</summary>
+<p>On Linux systems, you can install GCC using the package manager.</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gcc<span class="w"> </span>g++<span class="w"> </span>make<span class="w"> </span>gdb<span class="w"> </span>-y<span class="w">      </span>//<span class="w"> </span>Debian/Ubuntu
+sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>gcc<span class="w"> </span>gcc-c++<span class="w"> </span>make<span class="w"> </span>gdb<span class="w"> </span>-y<span class="w">  </span>//<span class="w"> </span>Fedora/CentOS/RHEL
+sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>gcc<span class="w"> </span>g++<span class="w"> </span>make<span class="w"> </span>gdb<span class="w">           </span>//<span class="w"> </span>Arch<span class="w"> </span>Linux/Manjaro
+</code></pre></div>
+</details>
 <p>Enter the <code>CContainerKit</code> directory and execute the following commands to compile the project:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>CContainerKit
 mkdir<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
@@ -792,7 +1012,7 @@ cmake<span class="w"> </span>--build<span class="w"> </span>.<span class="w"> </
 </code></pre></div>
 </div>
 <h2 id="how-to-import-the-library-in-a-new-project">How to Import the Library in a New Project<a class="headerlink" href="#how-to-import-the-library-in-a-new-project" title="Permanent link">&para;</a></h2>
-<p>This tutorial highly recommends using CMake to manage your project. The specific import steps are as follows:</p>
+<p>This tutorial highly recommends using <abbr title="A cross-platform build system used to load, configure, build, test, and install software.">CMake</abbr> to manage your project. The specific import steps are as follows:</p>
 <ol>
 <li>In your newly created project, create a <code>CMakeLists.txt</code> file.</li>
 <li>
@@ -849,6 +1069,8 @@ cmake<span class="w"> </span>--build<span class="w"> </span>.<span class="w"> </
     
   
   
+    
+  
 
 
   <aside class="md-source-file">
@@ -858,10 +1080,19 @@ cmake<span class="w"> </span>--build<span class="w"> </span>.<span class="w"> </
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="July 16, 2025 16:14:59 UTC">July 16, 2025 16:14:59</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="July 23, 2025 16:23:28 CST"><span class="timeago" datetime="2025-07-23T16:23:28+08:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="July 23, 2025 16:23:28 CST">2025-07-23</span>
   </span>
 
     
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="July 15, 2025 17:49:58 CST"><span class="timeago" datetime="2025-07-15T17:49:58+08:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="July 15, 2025 17:49:58 CST">2025-07-15</span>
+  </span>
+
     
     
     
@@ -930,6 +1161,10 @@ cmake<span class="w"> </span>--build<span class="w"> </span>.<span class="w"> </
     
     
       <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../js/timeago.min.js"></script>
+      
+        <script src="../js/timeago_mkdocs_material.js"></script>
       
     
   </body>
